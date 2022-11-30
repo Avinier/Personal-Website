@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skill--table {
+    /* clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 100%); Entry */
+    /* clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0); stage */
+    /* clip-path: polygon(0 0, 0 0, 100% 0, 100% 0); Exit */
+}
