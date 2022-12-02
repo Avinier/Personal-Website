@@ -62,7 +62,7 @@ const LOGOS = [
 
 export default function SkillGallery() {
   return (
-    <div className="grid grid-cols-3 gap-5  grid-flow-row-dense w-fit h-max max-[768px]:hidden">
+    <div className="grid grid-cols-3 gap-5 grid-flow-row-dense w-fit h-max max-[768px]:hidden">
       {LOGOS.map((logo) => {
         return <Logo key={logo.id} pic={logo.image} col={logo.color} />;
       })}

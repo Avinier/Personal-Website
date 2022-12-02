@@ -1,22 +1,25 @@
 /*TODO:
- - fix link bug
  - logo color picking
  - skilldata from a database
- - reusable animations
  - sexy navbar
  - logo/assets from stablediffusion
  - database making
  - storing assets in db
  - sexy grid
+ - zindex bug
  - email functionality
+ - sound effect
  - MongoDB Cluster Password- fTNzi1BR4YM4V4Lk
+ - finished!
 */
 
 import { useEffect, useRef } from 'react';
 import './App.css';
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Project from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import Grid from './components/UI/Grid';
 
 function App() {
   const scrollRef = useRef(null)
@@ -28,20 +31,14 @@ function App() {
   //     console.log(elementNode)
   // },[])
  
-  function scrollToIndex(index) {
-    if (scrollRef.current) {
-      const divNode = scrollRef.current;
-
-      const elementNode = divNode.querySelectorAll('.sect')[index];
-      console.log(elementNode)
-      elementNode.scrollIntoView({behavior: 'smooth'});
-    }
-  }
-
   return (
-    <div className="App bg-main px-[3%]">
-      <Navbar scrollHandler={scrollToIndex(1)}/>
+    <div className="App bg-main">
+      <Navbar scrollRef={scrollRef}/>
+      {/* <Grid /> */}
       <div className='Body' ref={scrollRef}>
+        <div className='sect pt-[10rem] max-[768px]:pt-[80px]'>
+          <Hero/>
+        </div>
         <div className='sect pt-[10rem]'>
           <Skills />
         </div>

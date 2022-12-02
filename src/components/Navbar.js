@@ -1,5 +1,5 @@
 import { motion, useScroll } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import Orb from "./UI/Orb";
 
@@ -14,43 +14,45 @@ function Stick() {
 }
 
 export default function Navbar(props) {
+  const scrollref = useRef(null);
   const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
-  const [didClick, setDidClick] = useState(false);
+  const [animate, setAnimate] = useState(false);
   const { scrollY } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: scrollref,
+    offset: ["start end", "end end"],
+  });
 
   useEffect(() => {
     return scrollY.onChange(() => {
-      setDidClick(false);
+      setAnimate(true);
     });
   }, []);
 
-  function scrollTo(ref) {
-    // ref.current.scrollIntoView({ behavior: "smooth" });
-    console.log(ref.current);
-  }
-
   const navMobileVer =
     "max-[768px]:flex-col max-[768px]:left-[85%] max-[768px]:justify-around max-[768px]:h-[50vh]";
+
   return (
     <motion.div
-      className={`fixed left-[33%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto -z-1 ${navMobileVer}`}
+      ref={scrollref}
+      className={`fixed left-[55%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto ${navMobileVer}`}
     >
-      {!didClick && (
+      {animate && (
         <motion.div
           onClick={() => {
-            setDidClick((clicked) => {
+            setAnimate((clicked) => {
               return !clicked;
             });
           }}
           className="btnOrb fixed w-[50px] h-[50px] bg-accent rounded-full hover:cursor-pointer left-[85%] top-[5%] min-[768px]:hidden min-[768px]:left-[45%]"
         ></motion.div>
       )}
-      {(isBigScreen || didClick) && (
+      {(isBigScreen || !animate) && (
         <>
-          <Orb></Orb>
-          <Orb clickHandler={props.scrollHandler}></Orb>
-          <Orb clickHandler={props.scrollHandler}></Orb>
-          <Orb></Orb>
+          <Orb index={0} scrollref={props.scrollRef}></Orb>
+          <Orb index={1} scrollref={props.scrollRef}></Orb>
+          <Orb index={2} scrollref={props.scrollRef}></Orb>
+          <Orb index={3} scrollref={props.scrollRef}></Orb>
           <Stick />
         </>
       )}

@@ -24,7 +24,7 @@ export function StyleOfLink(props) {
       <motion.button
         layout
         onClick={props.clickHandler}
-        className="skill--btn font-subheading text-pastel--purple text-xl hover:cursor-pointer"
+        className="skill--btn font-subheading text-pastel--purple hover:cursor-pointer"
         onHoverStart={() => {
           setAnimateLink(true);
         }}
@@ -33,13 +33,14 @@ export function StyleOfLink(props) {
         }}
       >
         {props.children}
+        <motion.div
+          variants={linkVars}
+          animate={animateLink ? "onStage" : "offStage"}
+          transition={{ duration: 0.4, type: "tween" }}
+          className="h-1 bg-slate-50"
+          style={{ backgroundColor: `${props.col}` }}
+        ></motion.div>
       </motion.button>
-      <motion.div
-        variants={linkVars}
-        animate={animateLink ? "onStage" : "offStage"}
-        transition={{ duration: 0.4, type: "tween" }}
-        className="h-1 bg-slate-50"
-      ></motion.div>
     </>
   );
 }
@@ -48,13 +49,17 @@ export default function Link(props) {
   return (
     <>
       {!props.isHref && (
-        <div className="w-fit py-2" onClick={props.clickHandler}>
+        <div className="w-fit py-2 text-xl" onClick={props.clickHandler}>
           <StyleOfLink>{props.children}</StyleOfLink>
         </div>
       )}
       {props.isHref && (
-        <a className="" href={props.href} target="_blank">
-          <StyleOfLink>{props.children}</StyleOfLink>
+        <a
+          className="h-fit w-fit text-[18px]"
+          href={props.href}
+          target="_blank"
+        >
+          <StyleOfLink col={props.color}>{props.children}</StyleOfLink>
         </a>
       )}
     </>
