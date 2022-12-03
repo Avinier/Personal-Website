@@ -1,3 +1,30 @@
 [
-    
+    {
+        "image" : "",
+        "title": "RPSLS Game",
+        "desc": "a rock paper scissors lizard spock game made /w React",
+        "link": "https://rpslsreact.netlify.app/",
+        "github": "https://github.com/Avinier/RPSLS-Game"
+    },
+    {
+        "image" : "",
+        "title": "Game of Life",
+        "desc": "a simulator based on Conoway's Game of Life",
+        "link": " https://gameoflifex.netlify.app",
+        "github": "https://github.com/Avinier/Game-of-Life"
+    },
+    {
+        "image" : "",
+        "title": "Creador NFT Minter",
+        "desc": "An NFT minter site, wip",
+        "link": "https://creador-nft-minter-wgpg.vercel.app/",
+        "github": "https://github.com/Avinier/Creador-NFT-Minter"
+    },
+    {
+        "image" : "",
+        "title": "Gesture Control App",
+        "desc": "A computer vision project made with Python and OpenCV",
+        "link": "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
+        "github": "https://github.com/Avinier/Gesture-Control-App"
+    }
 ]

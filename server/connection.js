@@ -1,10 +1,11 @@
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
-ATLAS_URI = "mongodb+srv://Aditya:fTNzi1BR4YM4V4Lk@personalwebsite.zxkuyna.mongodb.net/?retryWrites=true&w=majority";
+const ATLAS_URI = "mongodb+srv://Aditya:fTNzi1BR4YM4V4Lk@personalwebsite.zxkuyna.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(ATLAS_URI);
 const db = client.db("Personal-Website")
 const col = db.collection("skills")
 
+export const MAIN_DATA = [];
 async function mongoRetrieve(title) {
     const filteredDoc = await col.findOne({ "title": title });
     return filteredDoc
@@ -16,9 +17,15 @@ async function mongoInitialize(){
 }
 
 async function run(){
-  await mongoInitialize();
-  const skills = await mongoRetrieve("skills")
-  console.log(JSON.stringify(skills))
+  try {
+    await mongoInitialize();
+    const skills = await mongoRetrieve("skills")
+    MAIN_DATA.push(skills)
+    console.log("Success✅")
+  }
+  finally {
+    await client.close();
+  }
 }
 
 run();

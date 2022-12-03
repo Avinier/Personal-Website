@@ -8,7 +8,7 @@ module.exports = {
         main: "#0c0c0c",
         secondary: "#FF9FB0",
         accent: "#54ECC4",
-        "main--light": "#FFFFD0",
+        "main--light": "fefaf6",
         "secondary--light": "#FE4E83",
         "accent--light": "#00AC8E",
         "main--shade": "#491925",

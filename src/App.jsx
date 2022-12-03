@@ -8,6 +8,7 @@
  - projects card refubrish
  - email functionality
  - sound effect
+ - scroll animations
  - MongoDB Cluster Password- fTNzi1BR4YM4V4Lk
  - final touches
  - finished!

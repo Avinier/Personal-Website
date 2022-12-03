@@ -1,16 +1,10 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+import { MAIN_DATA } from "./connection.js";
+import express from "express";
 
 const app = express();
 const PORT = 5000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-app.get("/", (req, res) => {
-  res.json({
-    bleh: "bleh",
-    blah: 99,
-  });
+app.get("/skills", (req, res) => {
+  res.send(MAIN_DATA)
 });
 app.listen(PORT, () => console.log("Server is running"));

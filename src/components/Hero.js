@@ -33,7 +33,7 @@ export default function Hero() {
             layout
             variants={heroVar}
             animate={showMore ? "small" : "big"}
-            className="font-content  text-[25px] text-slate-50 dark:text-slate-700"
+            className="font-content text-[25px] text-slate-50 dark:text-slate-700"
           >
             AKA Aditya Subramanian, an 18 yo programmer and designer from
             Mumbai, India, currently studying computer science in NMIMS

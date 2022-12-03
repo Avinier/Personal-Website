@@ -1,83 +1,77 @@
-[
-    {
-        "title": "content",
-        "desc" : "Open to a wide spectrum of technical and non-technical skills. Also sharpening several soft power skills at the moment. One cool[?] skill i have is that i can remember many random quotes frm people"
-    },
-    {
-        "title": "skills",
-        "skills" : [
-            {
-                "id": "skills_1",
-                "name" : "react",
-                "level" : "proto-proficient",
-                "desc" : "up-to-date with v18.0 and its features. Dived into nextjs too"
-            },
-            {
-                "id": "skills_2",
-                "name" : "python",
-                "level" : "proficient",
-                "desc" : "worked /w opencv,tensorflow,django,pygame"
-            },
-            {
-                "id": "skills_3",
-                "name" : "javascript",
-                "level" : "proficient",
-                "desc" : "worked with js most of my time now"
-            },
-            {
-                "id": "skills_4",
-                "name" : "typescript",
-                "level" : "proto-proficient",
-                "desc" : "building web3 projects and refactoring some old js with it"
-            },
-            {
-                "id": "skills_5",
-                "name" : "html",
-                "level" : "proficient",
-                "desc" : "have pretty good practice with it"
-            },
-            {
-                "id": "skills_6",
-                "name" : "css",
-                "level" : "proficient",
-                "desc" : "have pretty good practice with it also"
-            },
-            {
-                "id": "skills_7",
-                "name" : "cpp",
-                "level" : "novice",
-                "desc" : "done low-level programming for dsa"
-            },
-            {
-                "id": "skills_8",
-                "name" : "illustrator",
-                "level" : "proficient",
-                "desc" : "use this too create assets for my project, n some art stuff"
-            },
-            {
-                "id": "skills_9",
-                "name" : "photoshop",
-                "level" : "proficient",
-                "desc" : "my graphic design work, here"
-            },
-            {
-                "id": "skills_10",
-                "name" : "mongodb",
-                "level" : "newbie",
-                "desc" : "basic CRUD operations and aggregations"
-            },
-            {
-                "id": "skills_11",
-                "name" : "nodejs",
-                "level" : "newbie",
-                "desc" : "aware about expressjs connections and middleware"
-            },
-            {
-                "id": "skills_12",
-                "name" : "rust",
-                "level" : "newbie",
-                "desc" : "learning"
-            }
-        ]
-    }
-]
+{
+    "title": "skills",
+    "skills": [
+        {
+            "id": "skills_1",
+            "name": "react",
+            "level": "proto-proficient",
+            "desc": "up-to-date with v18.0 and its features. Dived into nextjs too"
+        },
+        {
+            "id": "skills_2",
+            "name": "python",
+            "level": "proficient",
+            "desc": "worked /w opencv,tensorflow,django,pygame"
+        },
+        {
+            "id": "skills_3",
+            "name": "javascript",
+            "level": "proficient",
+            "desc": "worked with js most of my time now"
+        },
+        {
+            "id": "skills_4",
+            "name": "typescript",
+            "level": "proto-proficient",
+            "desc": "building web3 projects and refactoring some old js with it"
+        },
+        {
+            "id": "skills_5",
+            "name": "html",
+            "level": "proficient",
+            "desc": "have pretty good practice with it"
+        },
+        {
+            "id": "skills_6",
+            "name": "css",
+            "level": "proficient",
+            "desc": "have pretty good practice with it also"
+        },
+        {
+            "id": "skills_7",
+            "name": "cpp",
+            "level": "novice",
+            "desc": "done low-level programming for dsa"
+        },
+        {
+            "id": "skills_8",
+            "name": "illustrator",
+            "level": "proficient",
+            "desc": "use this too create assets for my project, n some art stuff"
+        },
+        {
+            "id": "skills_9",
+            "name": "photoshop",
+            "level": "proficient",
+            "desc": "my graphic design work, here"
+        },
+        {
+            "id": "skills_10",
+            "name": "mongodb",
+            "level": "newbie",
+            "desc": "basic CRUD operations and aggregations"
+        },
+        {
+            "id": "skills_11",
+            "name": "nodejs",
+            "level": "newbie",
+            "desc": "aware about expressjs connections and middleware"
+        },
+        {
+            "id": "skills_12",
+            "name": "rust",
+            "level": "newbie",
+            "desc": "learning"
+        }
+    ]
+}

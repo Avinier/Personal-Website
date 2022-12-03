@@ -31,7 +31,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="flex justify-around max-[786px]:w-[80%] max-[786px]:mx-auto">
+    <div className="flex justify-around max-[786px]:w-[80%] ml-[25px] max-[786px]:mx-auto">
       <article className="w-[50%] max-[786px]:w-fit">
         <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
@@ -49,7 +49,7 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="font-content text-slate-50 dark:text-slate-700  max-[786px]:w-fit"
+                className="font-content w-[80%] text-slate-50 dark:text-slate-700  max-[786px]:w-fit"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

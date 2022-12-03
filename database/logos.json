@@ -1,86 +1,86 @@
 [
   {
-    title: "react",
-    image: "",
-    color: "#333333",
-    details: "know hooks, router, redux for now",
+    "title": "react",
+    "image": "",
+    "color": "#333333",
+    "details": "know hooks, router, redux for now"
   },
   {
-    title: "python",
-    image: "",
-    color: "#FFE57D",
-    details: "played with many libraries like opencv, tensorflow",
+    "title": "python",
+    "image": "",
+    "color": "#FFE57D",
+    "details": "played with many libraries like opencv, tensorflow"
   },
   {
-    title: "javascript",
-    image: "",
-    color: "",
-    details: "from es6 to jquery, built with many things",
+    "title": "javascript",
+    "image": "",
+    "color": "",
+    "details": "from es6 to jquery, built with many things"
   },
   {
-    title: "typescript",
-    image: "",
-    color: "",
-    details: "creating web3 projects with it",
+    "title": "typescript",
+    "image": "",
+    "color": "",
+    "details": "creating web3 projects with it"
   },
   {
-    title: "html",
-    image: "",
-    color: "#e34c26",
-    details: "well versed with semantic html 5",
+    "title": "html",
+    "image": "",
+    "color": "#e34c26",
+    "details": "well versed with semantic html 5"
   },
   {
-    title: "css",
-    image: "",
-    color: "#4292E5",
-    details: "well versed with functional css 3",
+    "title": "css",
+    "image": "",
+    "color": "#4292E5",
+    "details": "well versed with functional css 3"
   },
   {
-    title: "cpp",
-    image: "",
-    color: "#244E96",
-    details: "coded in opengl and practiced dsa",
+    "title": "cpp",
+    "image": "",
+    "color": "#244E96",
+    "details": "coded in opengl and practiced dsa"
   },
   {
-    title: "illustrator",
-    image: "",
-    color: "",
-    details: "designed quite a lot with this for my websites",
+    "title": "illustrator",
+    "image": "",
+    "color": "",
+    "details": "designed quite a lot with this for my websites"
   },
   {
-    title: "photoshop",
-    image: "",
-    color: "#031628",
-    details: "most of my graphic design work made with this",
+    "title": "photoshop",
+    "image": "",
+    "color": "#031628",
+    "details": "most of my graphic design work made with this"
   },
   {
-    title: "mongodb",
-    image: "",
-    color: "",
-    details: "the database of this site is from mongodb",
+    "title": "mongodb",
+    "image": "",
+    "color": "",
+    "details": "the database of this site is from mongodb"
   },
   {
-    title: "nodejs",
-    image: "",
-    color: "",
-    details: "coded some middleware",
+    "title": "nodejs",
+    "image": "",
+    "color": "",
+    "details": "coded some middleware"
   },
   {
-    title: "rust",
-    image: "",
-    color: "",
-    details: "new to solana web3 dev",
+    "title": "rust",
+    "image": "",
+    "color": "",
+    "details": "new to solana web3 dev"
   },
   {
-    title: "github",
-    image: "",
+    "title": "github",
+    "image": ""
   },
   {
-    title: "twitter",
-    image: "",
+    "title": "twitter",
+    "image": ""
   },
   {
-    title: "gmail",
-    image: "",
-  },
-];
+    "title": "gmail",
+    "image": ""
+  }
+]
