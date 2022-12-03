@@ -33,10 +33,10 @@ export default function Skills() {
   return (
     <div className="flex justify-around max-[786px]:w-[80%] max-[786px]:mx-auto">
       <article className="w-[50%] max-[786px]:w-fit">
-        <h2 className="font-title font-black text-[5rem] text-secondary max-[786px]:text-[4rem]">
+        <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
         </h2>
-        <h3 className="text-accent--light">
+        <h3 className="text-accent--light dark:text-accent--light">
           Currently learning rust and web3, algorithms
         </h3>
 
@@ -49,7 +49,7 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="font-content text-slate-50 max-[786px]:w-fit"
+                className="font-content text-slate-50 dark:text-slate-700  max-[786px]:w-fit"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -76,9 +76,6 @@ export default function Skills() {
             }}
           >
             {!showTable ? `Show More` : `Show Less`}
-          </Link>
-          <Link isHref={true} href="https://github.com/Avinier">
-            Github
           </Link>
           <AnimatePresence>
             {showTable && (

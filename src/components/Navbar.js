@@ -1,5 +1,5 @@
 import { motion, useScroll } from "framer-motion";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Orb from "./UI/Orb";
 
@@ -14,18 +14,20 @@ function Stick() {
 }
 
 export default function Navbar(props) {
-  const scrollref = useRef(null);
   const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
   const [animate, setAnimate] = useState(false);
   const { scrollY } = useScroll();
-  const { scrollYProgress } = useScroll({
-    target: scrollref,
-    offset: ["start end", "end end"],
-  });
+  const [pos, setPos] = useState(0)
 
   useEffect(() => {
-    return scrollY.onChange(() => {
+    return scrollY.onChange((latest) => {
       setAnimate(true);
+      setPos(() => {
+        if (latest <= 250) {
+          return latest
+        }
+        return 250
+      })
     });
   }, []);
 
@@ -34,15 +36,14 @@ export default function Navbar(props) {
 
   return (
     <motion.div
-      ref={scrollref}
-      className={`fixed left-[55%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto ${navMobileVer}`}
+      className={`fixed left-[50%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto z-10 ${navMobileVer}`}
+      x="0"
+      style={isBigScreen && {x : -pos}}
     >
       {animate && (
         <motion.div
           onClick={() => {
-            setAnimate((clicked) => {
-              return !clicked;
-            });
+            setAnimate(!animate);
           }}
           className="btnOrb fixed w-[50px] h-[50px] bg-accent rounded-full hover:cursor-pointer left-[85%] top-[5%] min-[768px]:hidden min-[768px]:left-[45%]"
         ></motion.div>

@@ -24,7 +24,7 @@ export function StyleOfLink(props) {
       <motion.button
         layout
         onClick={props.clickHandler}
-        className="skill--btn font-subheading text-pastel--purple hover:cursor-pointer"
+        className="skill--btn font-subheading text-pastel--purple dark:text-purple-700 hover:cursor-pointer"
         onHoverStart={() => {
           setAnimateLink(true);
         }}
@@ -37,7 +37,7 @@ export function StyleOfLink(props) {
           variants={linkVars}
           animate={animateLink ? "onStage" : "offStage"}
           transition={{ duration: 0.4, type: "tween" }}
-          className="h-1 bg-slate-50"
+          className="h-1 bg-slate-50 dark:bg-slate-700"
           style={{ backgroundColor: `${props.col}` }}
         ></motion.div>
       </motion.button>

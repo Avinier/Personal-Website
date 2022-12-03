@@ -1,26 +1,24 @@
 const { MongoClient } = require("mongodb");
 
-ATLAS_URI =
-  "mongodb+srv://Aditya:fTNzi1BR4YM4V4Lk@personalwebsite.zxkuyna.mongodb.net/?retryWrites=true&w=majority";
-
+ATLAS_URI = "mongodb+srv://Aditya:fTNzi1BR4YM4V4Lk@personalwebsite.zxkuyna.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(ATLAS_URI);
+const db = client.db("Personal-Website")
+const col = db.collection("skills")
 
-async function run() {
-  try {
-    await client.connect();
-
-    const database = client.db("Personal-Website");
-    const skillsCollection = database.collection("skills");
-
-    const query = { title: "skills" };
-    const skills = await skillsCollection.find(query);
-
-    console.log(skills);
-
-    await client.db("admin").command({ ping: 1 });
-    console.log("Connected successfully to server");
-  } finally {
-    await client.close();
-  }
+async function mongoRetrieve(title) {
+    const filteredDoc = await col.findOne({ "title": title });
+    return filteredDoc
 }
-run().catch(console.dir);
+
+//methods call
+async function mongoInitialize(){
+  await client.connect();
+}
+
+async function run(){
+  await mongoInitialize();
+  const skills = await mongoRetrieve("skills")
+  console.log(JSON.stringify(skills))
+}
+
+run();

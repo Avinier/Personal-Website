@@ -17,7 +17,7 @@ export default function Grid() {
   });
 
   return (
-    <motion.div className="absolute grid grid-cols-10 max-[768px]:grid-cols-5">
+    <motion.div className="absolute grid grid-cols-10 max-[768px]:grid-cols-5 z-0">
       {grid.map((rows, x) =>
         rows.map((col, y) => (
           <motion.div
@@ -28,7 +28,6 @@ export default function Grid() {
                 gridCopy[x][y] = !grid[x][y];
               });
               setGrid(newGrid);
-              console.log(grid[x][y]);
             }}
             onHoverEnd={() => {
               setGrid((prev) => {
@@ -41,7 +40,7 @@ export default function Grid() {
                 });
               });
             }}
-            className={`${x}_${y}  w-[10vw] h-[10vw] max-[768px]:h-[20vw] max-[768px]:w-[20vw]    ${
+            className={`${x}_${y}  w-[10vw] h-[10vw] max-[768px]:h-[20vw] max-[768px]:w-[20vw] ${
               grid[x][y] ? `border-solid border-2 border-emerald-400` : ``
             }`}
           />

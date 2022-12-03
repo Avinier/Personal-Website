@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import heroImg from "../assets/katsuragi.jpg";
 import Link from "./UI/Link";
+import Grid from "./UI/Grid";
 
 export default function Hero() {
   const [showMore, setShowMore] = useState(false);
@@ -22,16 +23,17 @@ export default function Hero() {
   };
   return (
     <>
-      <div className="flex justify-around items-center max-[786px]:flex-col-reverse">
-        <div className="w-[40%] max-[786px]:w-[80%] max-[786px]:pt-[20px]">
-          <h1 className="font-title font-black text-[5rem] leading-[75px] pb-3 text-secondary max-[786px]:text-[4rem]">
+      <div className="relative flex justify-around items-center max-[786px]:flex-col-reverse">
+      {/* <Grid /> */}
+        <div className="w-[40%] max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
+          <h1 className="font-title font-black text-[5rem] leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Hi,<br></br>I'm Avinier
           </h1>
           <motion.p
             layout
             variants={heroVar}
             animate={showMore ? "small" : "big"}
-            className="font-content text-slate-50 text-[25px]"
+            className="font-content  text-[25px] text-slate-50 dark:text-slate-700"
           >
             AKA Aditya Subramanian, an 18 yo programmer and designer from
             Mumbai, India, currently studying computer science in NMIMS
@@ -72,7 +74,7 @@ export default function Hero() {
         </div>
         <img
           src={heroImg}
-          className="object-cover rounded-full w-[400px] h-[400px]"
+          className="object-cover rounded-full w-[400px] h-[400px] z-[5]"
         ></img>
       </div>
     </>
