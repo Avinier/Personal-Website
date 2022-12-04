@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from "../UI/Logo";
+import Logo from "../UI/Logo.js";
 
 import cppLogo from "../../assets/logos/cpp-logo.png";
 import cssLogo from "../../assets/logos/css-logo.png";
@@ -62,7 +62,7 @@ const LOGOS = [
 
 export default function SkillGallery() {
   return (
-    <div className="grid grid-cols-3 gap-5 grid-flow-row-dense w-fit h-max mr-[25px] max-[768px]:hidden">
+    <div className="grid grid-cols-3 gap-5 grid-flow-row-dense w-fit h-max mr-[25px] max-[768px]:hidden z-10">
       {LOGOS.map((logo) => {
         return <Logo key={logo.id} pic={logo.image} col={logo.color} />;
       })}

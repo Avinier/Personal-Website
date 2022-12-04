@@ -4,10 +4,7 @@
  - logo/assets from stablediffusion
  - database making
  - storing assets in db
- - light mode toggle
- - projects card refubrish
  - email functionality
- - sound effect
  - scroll animations
  - MongoDB Cluster Password- fTNzi1BR4YM4V4Lk
  - final touches
@@ -17,12 +14,12 @@
 import { useState } from 'react';
 import { useEffect, useRef } from 'react';
 import './App.css';
-import Connect from './components/Connect';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Project from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
-import Toggler from './components/UI/Toggler';
+import Connect from './components/Connect.js';
+import Hero from './components/Hero.js';
+import Navbar from './components/Navbar.js';
+import Project from './components/Projects/Projects.js';
+import Skills from './components/Skills/Skills.js';
+import Toggler from './components/UI/Toggler.js';
 
 function App() {
   const scrollRef = useRef(null)
@@ -41,7 +38,7 @@ function App() {
         <Navbar scrollRef={scrollRef} />
         <Toggler clickHandler={() => { setDarkMode(!darkMode) }} />
         <div className='sect pt-[10rem] max-[768px]:pt-[80px]'>
-          <Hero />
+          <Hero isDark={darkMode}/>
         </div>
         <div className='sect pt-[10rem]'>
           <Skills />

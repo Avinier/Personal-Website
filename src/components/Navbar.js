@@ -1,7 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Orb from "./UI/Orb";
+import Orb from "./UI/Orb.js";
 
 function Stick() {
   const stickMobileVer =
@@ -17,17 +17,17 @@ export default function Navbar(props) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
   const [animate, setAnimate] = useState(false);
   const { scrollY } = useScroll();
-  const [pos, setPos] = useState(0)
+  const [pos, setPos] = useState(0);
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
       setAnimate(true);
       setPos(() => {
         if (latest <= 250) {
-          return latest
+          return latest;
         }
-        return 250
-      })
+        return 250;
+      });
     });
   }, []);
 
@@ -36,9 +36,9 @@ export default function Navbar(props) {
 
   return (
     <motion.div
-      className={`fixed left-[50%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto z-10 ${navMobileVer}`}
+      className={`fixed left-[50%] w-[33%] pt-[15px] flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
       x="0"
-      style={isBigScreen && {x : -pos}}
+      style={isBigScreen && { x: -pos }}
     >
       {animate && (
         <motion.div

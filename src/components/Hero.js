@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import heroImg from "../assets/katsuragi.jpg";
-import Link from "./UI/Link";
-import Grid from "./UI/Grid";
+import Link from "./UI/Link.js";
+import Grid from "./UI/Grid.js";
 
-export default function Hero() {
+export default function Hero(props) {
   const [showMore, setShowMore] = useState(false);
 
   const heroVar = {
@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <>
       <div className="relative flex justify-around items-center max-[786px]:flex-col-reverse">
-      {/* <Grid /> */}
+        <Grid dark={props.isDark} />
         <div className="w-[40%] max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
           <h1 className="font-title font-black text-[5rem] leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Hi,<br></br>I'm Avinier

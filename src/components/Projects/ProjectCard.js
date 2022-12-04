@@ -20,7 +20,7 @@ export default function ProjectCard(props) {
 
   const HoverAnim = {
     boxShadow:
-      "rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px",
+      "rgba(255, 87, 128, 0.4) -5px 5px, rgba(255, 87, 128, 0.3) -10px 10px, rgba(255, 87, 128, 0.2) -15px 15px, rgba(255, 87, 128, 0.1) -20px 20px, rgba(255, 87, 128, 0.05) -25px 25px",
     x: "20px",
     y: "-20px",
   };
@@ -28,8 +28,6 @@ export default function ProjectCard(props) {
   function dragHandler(event, info) {
     let offsetX = Math.floor(info.offset.x);
     let offsetY = Math.floor(info.offset.y);
-
-    console.log(offsetX, offsetY);
 
     //N,S drag
     if ((offsetX === 0) & (offsetY < -5 || offsetX > 5)) {
@@ -62,28 +60,22 @@ export default function ProjectCard(props) {
       whileDrag={DragAnim}
       whileHover={HoverAnim}
       transition={{ duration: 0.5, type: "tween" }}
-      className="project--card w-[25%] bg-slate-50 rounded-lg m-5 max-[786px]:w-[80%] max-[786px]:mx-auto"
+      className="relative project--card w-[50%] h-[250px] rounded-lg m-5 max-[786px]:w-[80%] max-[786px]:mx-auto"
     >
+      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#760C27] rounded-lg z-10">
+        <h2 className="text-slate-50 font-content text-center mt-[30px] text-[18px]">
+          Project description blah blah blah
+        </h2>
+        <div className="flex justify-around mx-auto w-[50%] mt-[30px]">
+          <motion.div className="w-[60px] h-[60px] bg-accent rounded-full hover:cursor-pointer px-[5px]"></motion.div>
+          <motion.div className="w-[60px] h-[60px] bg-accent rounded-full hover:cursor-pointer px-[5px]"></motion.div>
+        </div>
+      </div>
+
       <img
-        className="w-[100%] h-[100px] object-cover rounded-t-lg"
+        className="absolute object-cover w-[100%] h-[100%] rounded-lg"
         src={props.pic}
       />
-      <div className=" p-5">
-        <p className="">{props.desc}</p>
-        <a className="text-accent cursor-pointer">{props.link}</a>
-        <ul className="flex ">
-          {ARR.map((stackitem, i) => {
-            return (
-              <li key={i}>
-                <img
-                  className="w-[40px] h-[40px] object-contain"
-                  src={stackitem}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
     </motion.section>
   );
 }

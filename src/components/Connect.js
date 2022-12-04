@@ -1,7 +1,8 @@
 import React from "react";
 import connectImg from "../assets/naruto.jpg";
-import Link from "./UI/Link";
+import Link from "./UI/Link.js";
 import { motion } from "framer-motion";
+import Grid from "./UI/Grid";
 
 export default function Connect() {
   return (

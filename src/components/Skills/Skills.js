@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavLink, Route, Router } from "react-router-dom";
 
 import "./Skills.css";
-import SkillGallery from "./SkillGallery";
-import SkillTable from "./SkillTable";
-import Link from "../UI/Link";
+import SkillGallery from "./SkillGallery.js";
+import SkillTable from "./SkillTable.js";
+import Link from "../UI/Link.js";
 
 import rightarrow from "../../assets/arrow-right-solid.svg";
 

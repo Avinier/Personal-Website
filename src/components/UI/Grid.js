@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import produce from "immer";
 import { useMediaQuery } from "react-responsive";
 
-export default function Grid() {
+export default function Grid(props) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 786px)" });
 
   const rowNum = 5;
@@ -15,6 +15,27 @@ export default function Grid() {
     }
     return rows;
   });
+
+  const gridVar = {
+    onHov: {
+      backgroundColor: props.dark
+        ? ["#111", "#222", "#333"]
+        : ["#F4D983", "#FFECB0", "#FFEFBE"],
+      transition: {
+        duration: 1,
+        type: "tween",
+      },
+    },
+    offHov: {
+      backgroundColor: props.dark
+        ? ["#333", "#222", "#0c0c0c"]
+        : ["#FFEFBE", "#FFECB0", "#FFFFD0"],
+      transition: {
+        duration: 0.5,
+        type: "tween",
+      },
+    },
+  };
 
   return (
     <motion.div className="absolute grid grid-cols-10 max-[768px]:grid-cols-5 z-0">
@@ -40,9 +61,9 @@ export default function Grid() {
                 });
               });
             }}
-            className={`${x}_${y}  w-[10vw] h-[10vw] max-[768px]:h-[20vw] max-[768px]:w-[20vw] ${
-              grid[x][y] ? `border-solid border-2 border-emerald-400` : ``
-            }`}
+            variants={gridVar}
+            animate={grid[x][y] ? "onHov" : "offHov"}
+            className={`${x}_${y}  w-[10vw] h-[10vw] max-[768px]:h-[20vw] max-[768px]:w-[20vw]`}
           />
         ))
       )}

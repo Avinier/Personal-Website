@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
-import Link from "../UI/Link";
+import ProjectCard from "./ProjectCard.js";
+import Link from "../UI/Link.js";
 
 import cppLogo from "../../assets/logos/cpp-logo.png";
 import cssLogo from "../../assets/logos/css-logo.png";
@@ -42,7 +42,13 @@ export default function Project() {
       <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
         My Projects
       </h2>
-      <p className="font-content text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px]">From Web-Dev to ML, have played with several tech stacks. Can checkout all of my projects <Link isHref={true} href="https://github.com/Avinier">here</Link></p>
+      <p className="font-content text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px]">
+        From Web-Dev to ML, have played with several tech stacks. Can checkout
+        all of my projects{" "}
+        <Link isHref={true} href="https://github.com/Avinier">
+          here
+        </Link>
+      </p>
       <div className="flex justify-between max-[786px]:flex-col">
         {DUMMY.map((item) => {
           return (
