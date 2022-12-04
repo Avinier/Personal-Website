@@ -62,8 +62,8 @@ export default function ProjectCard(props) {
       transition={{ duration: 0.5, type: "tween" }}
       className="relative project--card w-[50%] h-[250px] rounded-lg m-5 max-[786px]:w-[80%] max-[786px]:mx-auto"
     >
-      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#760C27] rounded-lg z-10">
-        <h2 className="text-slate-50 font-content text-center mt-[30px] text-[18px]">
+      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#0c0c0c] dark:from-[#FFFFD0] rounded-lg z-10">
+        <h2 className="text-slate-50 dark:text-slate-500 font-content text-center mt-[30px] text-[18px]">
           Project description blah blah blah
         </h2>
         <div className="flex justify-around mx-auto w-[50%] mt-[30px]">
