@@ -42,7 +42,7 @@ export default function Project(props) {
       <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
         My Projects
       </h2>
-      <p className="font-content text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px]">
+      <p className="font-content text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px] max-[786px]:mr-[10px]">
         From Web-Dev to ML, have played with several tech stacks. Can checkout
         all of my projects{" "}
         <Link isHref={true} href="https://github.com/Avinier">

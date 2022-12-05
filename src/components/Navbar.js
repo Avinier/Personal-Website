@@ -8,7 +8,7 @@ import orbLight from "../assets/orb--light.png";
 
 function Stick(props) {
   const stickMobileVer =
-    "max-[768px]:h-[80%] max-[768px]:w-1 max-[768px]:left-[15%] -z-10";
+    "max-[768px]:h-[80%] max-[768px]:w-1 max-[768px]:left-[17%] max-[768px]:top-[50px] -z-10";
   return (
     <motion.div
       className={`absolute top-[40px] w-[80%] h-1 ${stickMobileVer}`}

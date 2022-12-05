@@ -99,7 +99,7 @@ export default function Hero(props) {
           >
             {showMore ? "Less." : "More?"}
           </Link>
-          <section className="flex w-[35%] justify-between max-[768px]:w-[50%]">
+          <section className="flex w-[35%] justify-between max-[768px]:w-[60%]">
             <LogoOrb dark={props.isDark}>
               <a href="https://twitter.com/aviniertwt" target="_blank">
                 <motion.img
@@ -128,7 +128,7 @@ export default function Hero(props) {
         </div>
         <img
           src={heroImg}
-          className="object-cover rounded-full w-[450px] h-[450px] z-[5]"
+          className="object-cover rounded-full w-[450px] h-[450px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></img>
       </div>
     </>

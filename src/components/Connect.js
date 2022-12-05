@@ -25,7 +25,7 @@ export default function Connect() {
         </div>
         <img
           src={connectImg}
-          className="object-cover rounded-full w-[450px] h-[450px] z-[5]"
+          className="object-cover rounded-full w-[450px] h-[450px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></img>
       </div>
       <Footer />
