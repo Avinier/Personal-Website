@@ -55,7 +55,7 @@ export default function Link(props) {
       )}
       {props.isHref && (
         <a
-          className="h-fit w-fit text-[18px]"
+          className="font-content h-fit w-fit text-[17px]"
           href={props.href}
           target="_blank"
         >

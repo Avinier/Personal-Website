@@ -3,12 +3,18 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Orb from "./UI/Orb.js";
 
-function Stick() {
+import orbDark from "../assets/orb.png";
+import orbLight from "../assets/orb--light.png";
+
+function Stick(props) {
   const stickMobileVer =
-    "max-[768px]:h-[80%] max-[768px]:w-1 max-[768px]:left-[15%]";
+    "max-[768px]:h-[80%] max-[768px]:w-1 max-[768px]:left-[15%] -z-10";
   return (
     <motion.div
-      className={`absolute top-[40px] w-[80%] h-1 bg-accent ${stickMobileVer}`}
+      className={`absolute top-[40px] w-[80%] h-1 ${stickMobileVer}`}
+      style={{
+        backgroundImage: !props.dark ? `url(${orbDark})` : `url(${orbLight})`,
+      }}
     ></motion.div>
   );
 }
@@ -46,15 +52,25 @@ export default function Navbar(props) {
             setAnimate(!animate);
           }}
           className="btnOrb fixed w-[50px] h-[50px] bg-accent rounded-full hover:cursor-pointer left-[85%] top-[5%] min-[768px]:hidden min-[768px]:left-[45%]"
+          whileHover={{ rotate: [90, 0] }}
+          transition={{ duration: 0.5, type: "tween" }}
+          style={{
+            backgroundImage: !props.isDark
+              ? `url(${orbDark})`
+              : `url(${orbLight})`,
+            backgroundSize: "200%",
+            backgroundPositionX: "-50px",
+            backgroundPositionY: "-50px",
+          }}
         ></motion.div>
       )}
       {(isBigScreen || !animate) && (
         <>
-          <Orb index={0} scrollref={props.scrollRef}></Orb>
-          <Orb index={1} scrollref={props.scrollRef}></Orb>
-          <Orb index={2} scrollref={props.scrollRef}></Orb>
-          <Orb index={3} scrollref={props.scrollRef}></Orb>
-          <Stick />
+          <Orb index={0} scrollref={props.scrollRef} dark={props.isDark}></Orb>
+          <Orb index={1} scrollref={props.scrollRef} dark={props.isDark}></Orb>
+          <Orb index={2} scrollref={props.scrollRef} dark={props.isDark}></Orb>
+          <Orb index={3} scrollref={props.scrollRef} dark={props.isDark}></Orb>
+          <Stick dark={props.isDark} />
         </>
       )}
     </motion.div>

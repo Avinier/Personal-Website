@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./ProjectCard.css";
+import { LogoOrb } from "../Hero";
+
+import githubDark from "../../assets/logos/github.png";
+import githubLight from "../../assets/logos/github--light.png";
+import eyeDark from "../../assets/logos/eye.png";
+import eyeLight from "../../assets/logos/closed-eye--light.png";
 
 export default function ProjectCard(props) {
   const [shadowPosX, setShadowPosX] = useState(8);
@@ -67,8 +73,22 @@ export default function ProjectCard(props) {
           Project description blah blah blah
         </h2>
         <div className="flex justify-around mx-auto w-[50%] mt-[30px]">
-          <motion.div className="w-[60px] h-[60px] bg-accent rounded-full hover:cursor-pointer px-[5px]"></motion.div>
-          <motion.div className="w-[60px] h-[60px] bg-accent rounded-full hover:cursor-pointer px-[5px]"></motion.div>
+          <LogoOrb dark={props.dark}>
+            <a href={props.github} target="_blank">
+              <motion.img
+                src={props.dark ? githubDark : githubLight}
+                className="w-[80%] mx-auto mt-[5px]"
+              />
+            </a>
+          </LogoOrb>
+          <LogoOrb dark={props.dark}>
+            <a href={props.link} target="_blank">
+              <motion.img
+                src={props.dark ? eyeDark : eyeLight}
+                className="w-[80%] mx-auto mt-[5px]"
+              />
+            </a>
+          </LogoOrb>
         </div>
       </div>
 

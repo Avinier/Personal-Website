@@ -13,3 +13,29 @@
   font-family: "Open Sans";
   src: url("./fonts/OpenSans-Semibold.ttf") format("ttf"),
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #fb9fb0 #0c0c0c;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0c0c0c;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #fb9fb0;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }  
+
+.App {
+  overflow-x: hidden;
+}

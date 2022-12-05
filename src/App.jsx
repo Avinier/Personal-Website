@@ -4,8 +4,6 @@
  - logo/assets from stablediffusion
  - database making
  - storing assets in db
- - email functionality
- - scroll animations
  - MongoDB Cluster Password- fTNzi1BR4YM4V4Lk
  - final touches
  - finished!
@@ -25,28 +23,21 @@ function App() {
   const scrollRef = useRef(null)
   const [darkMode, setDarkMode] = useState(true)
 
-  // useEffect(() => {
-  //   const divNode = scrollRef.current;
-
-  //     const elementNode = divNode.querySelectorAll('li')[1];
-  //     console.log(elementNode)
-  // },[])
-
   return (
     <div className={`App ${!darkMode && `dark`}`}>
-      <div className='Body bg-main dark:bg-main--light' ref={scrollRef}>
-        <Navbar scrollRef={scrollRef} />
-        <Toggler clickHandler={() => { setDarkMode(!darkMode) }} />
-        <div className='sect pt-[10rem] max-[768px]:pt-[80px]'>
+      <div className='Body bg-main dark:bg-main--light ' ref={scrollRef}>
+        <Navbar scrollRef={scrollRef} isDark={darkMode}/>
+        <Toggler clickHandler={() => { setDarkMode(!darkMode) }} isDark={darkMode} />
+        <div className='sect pt-[10rem] max-[768px]:pt-[8rem]'>
           <Hero isDark={darkMode}/>
         </div>
-        <div className='sect pt-[10rem]'>
+        <div className='sect pt-[10rem] max-[768px]:pt-[8rem]'>
           <Skills />
         </div>
-        <div className='sect pt-[10rem]'>
-          <Project />
+        <div className='sect pt-[10rem] max-[768px]:pt-[8rem]'>
+          <Project isDark={darkMode}/>
         </div>
-        <div className='sect py-[10rem]'>
+        <div className='sect pt-[10rem] max-[768px]:pt-[8rem]'>
           <Connect />
         </div>
       </div>

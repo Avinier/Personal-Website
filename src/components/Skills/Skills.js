@@ -30,13 +30,13 @@ export default function Skills() {
   };
 
   return (
-    <div className="flex justify-around max-[786px]:w-[80%] ml-[25px] max-[786px]:mx-auto">
+    <div className="flex justify-around max-[786px]:w-[80%] ml-[25px] max-[786px]:mx-auto dark:font-medium">
       <article className="w-[50%] max-[786px]:w-fit">
         <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
         </h2>
-        <h3 className="text-accent--light dark:text-accent--light">
-          Currently learning rust and web3, algorithms
+        <h3 className="bg-accent--light text-slate-50 font-medium font-content rounded-lg w-fit my-[10px] py-[5px] px-[10px]">
+          Currently learning Rust and web3, algorithms
         </h3>
 
         <AnimatePresence>
@@ -48,14 +48,12 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="font-content w-[80%] text-slate-50 dark:text-slate-700  max-[786px]:w-fit"
+                className="font-content w-[80%] text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+                nisi ut aliquip ex ea commodo consequat.
               </motion.p>
               <div className="w-fit relative flex max-[768px]:hidden">
                 <Link>Explore Here</Link>

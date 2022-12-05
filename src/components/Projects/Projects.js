@@ -16,29 +16,29 @@ const DUMMY = [
     project: "RPSLS GAME",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: rpslsPic,
-    link: "https://github.com/Avinier",
-    techstack: [cppLogo, cssLogo, htmlLogo],
+    github: "https://github.com/Avinier/RPSLS-Game",
+    link: "https://rpslsreact.netlify.app/",
   },
   {
     id: 2,
     project: "game of life",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gameoflifePic,
-    link: "https://github.com/Avinier",
-    techstack: [cppLogo, cssLogo, htmlLogo],
+    github: "https://github.com/Avinier/Game-of-Life",
+    link: "https://gameoflifex.netlify.app/",
   },
   {
     id: 3,
     project: "GESTURES CONTROL",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gesturecontrolPic,
-    link: "https://github.com/Avinier",
-    techstack: [cppLogo, cssLogo, htmlLogo],
+    github: "hgithubttps://github.com/Avinier/Gesture-Control-App",
+    link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
 ];
-export default function Project() {
+export default function Project(props) {
   return (
-    <section className="min-[768px]:mx-[80px]">
+    <section className="min-[768px]:mx-[80px] dark:font-medium">
       <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
         My Projects
       </h2>
@@ -58,7 +58,9 @@ export default function Project() {
               desc={item.desc}
               pic={item.image}
               link={item.link}
+              github={item.github}
               stack={item.techstack}
+              dark={props.isDark}
             />
           );
         })}
