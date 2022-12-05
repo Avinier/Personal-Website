@@ -2,13 +2,9 @@ import React from "react";
 import ProjectCard from "./ProjectCard.js";
 import Link from "../UI/Link.js";
 
-import cppLogo from "../../assets/logos/cpp-logo.png";
-import cssLogo from "../../assets/logos/css-logo.png";
-import htmlLogo from "../../assets/logos/html-logo.png";
-
-import rpslsPic from "../../assets/projectpics/rpsls.png";
-import gameoflifePic from "../../assets/projectpics/gameoflife.png";
-import gesturecontrolPic from "../../assets/projectpics/gesturecontrol.png";
+import rpslsPic from "../../assets/projectpics/rpsls.webp";
+import gameoflifePic from "../../assets/projectpics/gameoflife.webp";
+import gesturecontrolPic from "../../assets/projectpics/gesturecontrol.webp";
 
 const DUMMY = [
   {

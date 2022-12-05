@@ -13,14 +13,43 @@ export default function Connect() {
             Wanna Connect?
           </h1>
           <motion.p className="text-slate-50 dark:text-slate-700 text-[18px] leading-8">
-            I'm most active in <Link isHref={true}>Elon's Kingdom</Link>, or you
-            can find me chilling with <Link isHref={true}>wumpus</Link> or on{" "}
-            <Link isHref={true}>IG</Link>. And if you wanna keep it damn real,{" "}
-            <Link isHref={true} href="mailto:adisubu2410@gmail.com">
+            I'm most active in{" "}
+            <Link
+              isHref={true}
+              href="https://twitter.com/aviniertwt"
+              color="#1DA1F2"
+            >
+              Elon's Kingdom
+            </Link>
+            , or you can find me chilling with{" "}
+            <Link
+              isHref={true}
+              href="https://discord.com/users/1025039473932775485"
+              color="#7289da"
+            >
+              wumpus
+            </Link>{" "}
+            or on{" "}
+            <Link isHref={true} color="#833AB4">
+              IG
+            </Link>
+            . And if you wanna keep it damn real,{" "}
+            <Link
+              isHref={true}
+              href="mailto:adisubu2410@gmail.com"
+              color="#E1306C"
+            >
               mail me!
             </Link>{" "}
-            You can stalk my <Link isHref={true}>graphic design work</Link> too
-            :D. I'm always open to fun conversations and cool work.
+            You can stalk my{" "}
+            <Link
+              isHref={true}
+              href="https://in.pinterest.com/avinier_2410/moi-work/"
+              color="#E60023"
+            >
+              graphic design work
+            </Link>{" "}
+            too :D. I'm always open to fun conversations and cool work.
           </motion.p>
         </div>
         <img

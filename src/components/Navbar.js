@@ -3,18 +3,36 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Orb from "./UI/Orb.js";
 
-import orbDark from "../assets/orb.png";
-import orbLight from "../assets/orb--light.png";
+import orbDark from "../assets/orb.webp";
+import orbLight from "../assets/orb--light.webp";
 
 function Stick(props) {
   const stickMobileVer =
     "max-[768px]:h-[80%] max-[768px]:w-1 max-[768px]:left-[17%] max-[768px]:top-[50px] -z-10";
+
+  const stickVar = {
+    onStage: {
+      clipath: [
+        "polygon(0% 0%, 100% 0%, 100% 0, 0 0)",
+        "polygon(0% 0%, 100% 0, 100% 100%, 0 100%)",
+      ],
+    },
+    offStage: {
+      clipath: [
+        "polygon(0% 0%, 100% 0, 100% 100%, 0 100%)",
+        "polygon(0% 0%, 100% 0%, 100% 0, 0 0)",
+      ],
+    },
+  };
   return (
     <motion.div
       className={`absolute top-[40px] w-[80%] h-1 ${stickMobileVer}`}
       style={{
         backgroundImage: !props.dark ? `url(${orbDark})` : `url(${orbLight})`,
       }}
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, type: "tween" }}
     ></motion.div>
   );
 }
@@ -70,7 +88,7 @@ export default function Navbar(props) {
           <Orb index={1} scrollref={props.scrollRef} dark={props.isDark}></Orb>
           <Orb index={2} scrollref={props.scrollRef} dark={props.isDark}></Orb>
           <Orb index={3} scrollref={props.scrollRef} dark={props.isDark}></Orb>
-          <Stick dark={props.isDark} />
+          <Stick dark={props.isDark} animate={animate} />
         </>
       )}
     </motion.div>

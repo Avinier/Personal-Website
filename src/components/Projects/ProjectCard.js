@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import "./ProjectCard.css";
 import { LogoOrb } from "../Hero";
 
-import githubDark from "../../assets/logos/github.png";
-import githubLight from "../../assets/logos/github--light.png";
-import eyeDark from "../../assets/logos/eye.png";
-import eyeLight from "../../assets/logos/closed-eye--light.png";
+import githubDark from "../../assets/logos/github.webp";
+import githubLight from "../../assets/logos/github--light.webp";
+import eyeDark from "../../assets/logos/eye.webp";
+import eyeLight from "../../assets/logos/closed-eye--light.webp";
 
 export default function ProjectCard(props) {
   const [shadowPosX, setShadowPosX] = useState(8);

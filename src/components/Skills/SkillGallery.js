@@ -2,15 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Logo from "../UI/Logo.js";
 
-import cppLogo from "../../assets/logos/cpp-logo.png";
-import cssLogo from "../../assets/logos/css-logo.png";
-import htmlLogo from "../../assets/logos/html-logo.png";
-import illustratorLogo from "../../assets/logos/illustrator-logo.png";
-import javascriptLogo from "../../assets/logos/javascript-logo.png";
-import photoshopLogo from "../../assets/logos/photoshop-logo.png";
-import pythonLogo from "../../assets/logos/python-logo.png";
-import reactLogo from "../../assets/logos/react-logo.png";
-import typescriptLogo from "../../assets/logos/typescript-logo.png";
+import cppLogo from "../../assets/logos/cpp-logo.webp";
+import cssLogo from "../../assets/logos/css-logo.webp";
+import htmlLogo from "../../assets/logos/html-logo.webp";
+import illustratorLogo from "../../assets/logos/illustrator-logo.webp";
+import javascriptLogo from "../../assets/logos/javascript-logo.webp";
+import photoshopLogo from "../../assets/logos/photoshop-logo.webp";
+import pythonLogo from "../../assets/logos/python-logo.webp";
+import reactLogo from "../../assets/logos/react-logo.webp";
+import typescriptLogo from "../../assets/logos/typescript-logo.webp";
 
 const LOGOS = [
   {

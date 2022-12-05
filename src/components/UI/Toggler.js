@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import eyeDark from "../../assets/logos/eye.png";
-import eyeLight from "../../assets/logos/closed-eye--light.png";
-import orbDark from "../../assets/orb.png";
-import orbLight from "../../assets/orb--light.png";
+import eyeDark from "../../assets/logos/eye.webp";
+import eyeLight from "../../assets/logos/closed-eye--light.webp";
+import orbDark from "../../assets/orb.webp";
+import orbLight from "../../assets/orb--light.webp";
 
 export default function Toggler(props) {
   return (
@@ -21,7 +21,7 @@ export default function Toggler(props) {
     >
       <motion.img
         src={props.isDark ? eyeDark : eyeLight}
-        className="w-[80%] mx-auto mt-[5px]"
+        className="w-[75%] mx-auto mt-[5px]"
       />
     </motion.div>
   );

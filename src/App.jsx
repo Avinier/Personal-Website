@@ -10,7 +10,7 @@
 */
 
 import { useState } from 'react';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import './App.css';
 import Connect from './components/Connect.js';
 import Hero from './components/Hero.js';

@@ -3,16 +3,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "./UI/Link.js";
 import Grid from "./UI/Grid.js";
 
-import heroImg from "../assets/katsuragi.jpg";
-import twitterDark from "../assets/logos/twitter.png";
-import twitterLight from "../assets/logos/twitter--light.png";
-import githubDark from "../assets/logos/github.png";
-import githubLight from "../assets/logos/github--light.png";
-import gmailDark from "../assets/logos/gmail.png";
-import gmailLight from "../assets/logos/gmail--light.png";
+import heroImg from "../assets/katsuragi.webp";
+import twitterDark from "../assets/logos/twitter.webp";
+import twitterLight from "../assets/logos/twitter--light.webp";
+import githubDark from "../assets/logos/github.webp";
+import githubLight from "../assets/logos/github--light.webp";
+import gmailDark from "../assets/logos/gmail.webp";
+import gmailLight from "../assets/logos/gmail--light.webp";
 
-import orbDark from "../assets/orb.png";
-import orbLight from "../assets/orb--light.png";
+import orbDark from "../assets/orb.webp";
+import orbLight from "../assets/orb--light.webp";
 
 export function LogoOrb(props) {
   return (
@@ -75,7 +75,7 @@ export default function Hero(props) {
                   <Link
                     isHref={true}
                     href="https://letterboxd.com/kinoavinier/"
-                    color="#1da1f2"
+                    color="#ff8000"
                   >
                     avid cinephile
                   </Link>
@@ -83,7 +83,7 @@ export default function Hero(props) {
                   <Link
                     isHref={true}
                     href="https://open.spotify.com/user/fwtbg1aq02m65e70m5d9j1d1n"
-                    color="#ffffff"
+                    color="#1DB954"
                   >
                     music connoisseur
                   </Link>
