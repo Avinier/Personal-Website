@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("ttf"),
+  }
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.ttf") format("ttf"),
+        url("./fonts/Poppins-Light.ttf") format("ttf")
+  }
+  
+  @font-face {
+    font-family: "Open Sans";
+    src: url("./fonts/OpenSans-Semibold.ttf") format("ttf"),
+  }
