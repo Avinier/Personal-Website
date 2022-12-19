@@ -30,7 +30,11 @@ export default function Connect() {
               wumpus
             </Link>{" "}
             or on{" "}
-            <Link isHref={true} color="#833AB4">
+            <Link
+              isHref={true}
+              href="https://www.instagram.com/avinier_2410/"
+              color="#833AB4"
+            >
               IG
             </Link>
             . And if you wanna keep it damn real,{" "}
