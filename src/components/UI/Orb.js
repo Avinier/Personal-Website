@@ -1,7 +1,5 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import orbDark from "../../assets/orb.webp";
-import orbLight from "../../assets/orb--light.webp";
 
 export default function Orb(props) {
   const scrollToIndex = () => {
@@ -16,18 +14,10 @@ export default function Orb(props) {
 
   return (
     <motion.div
-      className="w-[50px] h-[50px] rounded-full hover:cursor-pointer"
+      className="w-[50px] h-[50px] hover:cursor-pointer font-title text-[20px] font-black dark:text-main text-white"
       onClick={scrollToIndex}
-      whileHover={{ rotate: [90, 0] }}
-      initial={{ opacity: 0.5 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, type: "tween" }}
-      style={{
-        backgroundImage: !props.dark ? `url(${orbDark})` : `url(${orbLight})`,
-        backgroundSize: "200%",
-        backgroundPositionX: "-50px",
-        backgroundPositionY: "-50px",
-      }}
-    ></motion.div>
+    >
+      {props.name}
+    </motion.div>
   );
 }

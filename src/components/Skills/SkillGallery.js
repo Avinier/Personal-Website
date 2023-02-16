@@ -2,69 +2,69 @@ import React from "react";
 import { motion } from "framer-motion";
 import Logo from "../UI/Logo.js";
 
-import cppLogo from "../../assets/logos/cpp-logo.webp";
-import cssLogo from "../../assets/logos/css-logo.webp";
-import htmlLogo from "../../assets/logos/html-logo.webp";
-import illustratorLogo from "../../assets/logos/illustrator-logo.webp";
-import javascriptLogo from "../../assets/logos/javascript-logo.webp";
-import photoshopLogo from "../../assets/logos/photoshop-logo.webp";
-import pythonLogo from "../../assets/logos/python-logo.webp";
-import reactLogo from "../../assets/logos/react-logo.webp";
-import typescriptLogo from "../../assets/logos/typescript-logo.webp";
-
-const LOGOS = [
+const SKILLS = [
+  {
+    id: 0,
+    title: "python",
+  },
   {
     id: 1,
-    image: reactLogo,
-    color: "#333333",
+    title: "python",
   },
   {
     id: 2,
-    image: pythonLogo,
-    color: "#FFE57D",
+    title: "python",
   },
   {
     id: 3,
-    image: javascriptLogo,
-    color: "#222222",
+    title: "python",
   },
   {
     id: 4,
-    image: typescriptLogo,
-    color: "#222222",
+    title: "python",
   },
   {
     id: 5,
-    image: htmlLogo,
-    color: "#e34c26",
+    title: "python",
   },
   {
     id: 6,
-    image: cssLogo,
-    color: "#4292E5",
+    title: "python",
   },
   {
     id: 7,
-    image: cppLogo,
-    color: "#244E96",
+    title: "python",
   },
   {
     id: 8,
-    image: illustratorLogo,
-    color: "#222222",
+    title: "python",
   },
   {
     id: 9,
-    image: photoshopLogo,
-    color: "#031628",
+    title: "python",
+  },
+  {
+    id: 10,
+    title: "python",
+  },
+  {
+    id: 11,
+    title: "python",
   },
 ];
 
 export default function SkillGallery() {
   return (
-    <div className="grid grid-cols-3 gap-5 grid-flow-row-dense w-fit h-max mr-[25px] max-[768px]:hidden z-10">
-      {LOGOS.map((logo) => {
-        return <Logo key={logo.id} pic={logo.image} col={logo.color} />;
+    <div className="grid grid-cols-4 gap-[50px] w-[60%] mx-auto pt-[50px] h-max max-[768px]:hidden z-10">
+      {SKILLS.map((item, i) => {
+        return (
+          <div
+            className="text-center font-content text-slate-50 dark:text-slate-700"
+            key={item.id}
+          >
+            {item.title}
+          </div>
+        );
       })}
     </div>
   );

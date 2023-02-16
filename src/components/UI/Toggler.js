@@ -1,28 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import eyeDark from "../../assets/logos/eye.webp";
-import eyeLight from "../../assets/logos/closed-eye--light.webp";
-import orbDark from "../../assets/orb.webp";
-import orbLight from "../../assets/orb--light.webp";
 
 export default function Toggler(props) {
   return (
     <motion.div
-      className="absolute top-[15px] left-[85%] max-[768px]:left-[5%] max-[768px]:top-[35px] w-[50px] h-[50px] rounded-full  z-10 hover:cursor-pointer"
-      whileHover={{ rotate: [180, 360] }}
-      transition={{ duration: 0.5, type: "tween" }}
-      style={{
-        backgroundImage: !props.isDark ? `url(${orbDark})` : `url(${orbLight})`,
-        backgroundSize: "200%",
-        backgroundPositionX: "-50px",
-        backgroundPositionY: "-50px",
-      }}
+      className="absolute top-[15px] left-[85%] max-[768px]:left-[5%] max-[768px]:top-[35px] z-10 hover:cursor-pointer font-title text-[20px] font-black dark:text-main text-white"
       onClick={props.clickHandler}
     >
-      <motion.img
-        src={props.isDark ? eyeDark : eyeLight}
-        className="w-[75%] mx-auto mt-[5px]"
-      />
+      T
     </motion.div>
   );
 }

@@ -37,7 +37,7 @@ export function StyleOfLink(props) {
           variants={linkVars}
           animate={animateLink ? "onStage" : "offStage"}
           transition={{ duration: 0.4, type: "tween" }}
-          className="h-1 bg-slate-50 dark:bg-slate-700"
+          className="h-[6px] bg-slate-50 dark:bg-slate-700"
           style={{ backgroundColor: `${props.col}` }}
         ></motion.div>
       </motion.button>
@@ -49,7 +49,10 @@ export default function Link(props) {
   return (
     <>
       {!props.isHref && (
-        <div className="w-fit py-2 text-xl" onClick={props.clickHandler}>
+        <div
+          className="w-fit py-2 text-xl mx-auto"
+          onClick={props.clickHandler}
+        >
           <StyleOfLink>{props.children}</StyleOfLink>
         </div>
       )}

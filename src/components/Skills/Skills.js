@@ -6,8 +6,6 @@ import SkillGallery from "./SkillGallery.js";
 import SkillTable from "./SkillTable.js";
 import Link from "../UI/Link.js";
 
-import rightarrow from "../../assets/arrow-right-solid.svg";
-
 export default function Skills() {
   const [showTable, setShowTable] = useState(false);
 
@@ -30,15 +28,11 @@ export default function Skills() {
   };
 
   return (
-    <div className="flex justify-around max-[786px]:w-[80%] ml-[25px] max-[786px]:mx-auto dark:font-medium">
-      <article className="w-[50%] max-[786px]:w-fit">
-        <h2 className="font-title font-black text-[5rem] text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
+    <div className=" flex flex-col max-[786px]:w-[80%]  max-[786px]:mx-auto dark:font-medium">
+      <article className="w-[80%] mx-auto max-[786px]:w-fit">
+        <h2 className="font-title font-black text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
         </h2>
-        <h3 className="bg-accent--light text-slate-50 font-medium font-content rounded-lg w-fit my-[10px] py-[5px] px-[10px]">
-          Currently learning Rust and web3, algorithms
-        </h3>
-
         <AnimatePresence>
           {!showTable && (
             <motion.section
@@ -48,20 +42,13 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="font-content w-[80%] text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
+                className="font-content w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </motion.p>
-              <div className="w-fit relative flex max-[768px]:hidden">
-                <Link>Explore Here</Link>
-                <img
-                  className="h-[20px] absolute top-[30%] left-[105%]"
-                  src={rightarrow}
-                />
-              </div>
             </motion.section>
           )}
         </AnimatePresence>
@@ -91,7 +78,7 @@ export default function Skills() {
           </AnimatePresence>
         </motion.div>
       </article>
-      <SkillGallery />
+      {!showTable && <SkillGallery />}
     </div>
   );
 }

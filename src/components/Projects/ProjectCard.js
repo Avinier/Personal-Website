@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./ProjectCard.css";
-import { LogoOrb } from "../Hero";
-
-import githubDark from "../../assets/logos/github.webp";
-import githubLight from "../../assets/logos/github--light.webp";
-import eyeDark from "../../assets/logos/eye.webp";
-import eyeLight from "../../assets/logos/closed-eye--light.webp";
 
 export default function ProjectCard(props) {
   const [shadowPosX, setShadowPosX] = useState(8);
@@ -66,34 +60,16 @@ export default function ProjectCard(props) {
       whileDrag={DragAnim}
       whileHover={HoverAnim}
       transition={{ duration: 0.5, type: "tween" }}
-      className="relative project--card w-[50%] h-[250px] rounded-lg m-5 max-[786px]:w-[80%] max-[786px]:mx-auto"
+      className="relative project--card w-[250px] h-[250px] max-[786px]:w-[80%] max-[786px]:mx-auto cursor-pointer"
     >
-      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#0c0c0c] dark:from-[#FFFFD0] rounded-lg z-10">
+      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#0c0c0c] dark:from-[#FFFFD0] z-10">
         <h2 className="text-slate-50 dark:text-slate-500 font-content text-center mt-[30px] text-[18px]">
           Project description blah blah blah
         </h2>
-        <div className="flex justify-around mx-auto w-[50%] mt-[30px]">
-          <LogoOrb dark={props.dark}>
-            <a href={props.github} target="_blank">
-              <motion.img
-                src={props.dark ? githubDark : githubLight}
-                className="w-[80%] mx-auto mt-[5px]"
-              />
-            </a>
-          </LogoOrb>
-          <LogoOrb dark={props.dark}>
-            <a href={props.link} target="_blank">
-              <motion.img
-                src={props.dark ? eyeDark : eyeLight}
-                className="w-[80%] mx-auto mt-[5px]"
-              />
-            </a>
-          </LogoOrb>
-        </div>
       </div>
 
       <img
-        className="absolute object-cover w-[100%] h-[100%] rounded-lg"
+        className="absolute object-cover w-[100%] h-[100%]"
         src={props.pic}
       />
     </motion.section>

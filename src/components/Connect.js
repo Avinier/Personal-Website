@@ -7,12 +7,16 @@ import Footer from "./UI/Footer";
 export default function Connect() {
   return (
     <>
-      <div className="relative flex justify-around items-center max-[786px]:flex-col-reverse dark:font-medium pb-[5rem]">
-        <div className="w-[40%] max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
-          <h1 className="font-title font-black text-[5rem] leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
+      <div className="relative flex flex-col justify-around items-center max-[786px]:flex-col-reverse dark:font-medium pb-[5rem]">
+        <img
+          src={connectImg}
+          className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
+        ></img>
+        <div className=" max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
+          <h1 className="font-title font-black text-[5rem] text-center pt-[20px] leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Wanna Connect?
           </h1>
-          <motion.p className="text-slate-50 dark:text-slate-700 text-[18px] leading-8">
+          <motion.p className="w-[50%] text-center mx-auto text-slate-50 dark:text-slate-700 text-[18px] leading-8">
             I'm most active in{" "}
             <Link
               isHref={true}
@@ -56,10 +60,6 @@ export default function Connect() {
             too :D. I'm always open to fun conversations and cool work.
           </motion.p>
         </div>
-        <img
-          src={connectImg}
-          className="object-cover rounded-full w-[450px] h-[450px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
-        ></img>
       </div>
       <Footer />
     </>
