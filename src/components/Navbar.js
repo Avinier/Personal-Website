@@ -31,7 +31,11 @@ export default function Navbar(props) {
         transition={{ duration: 0.3, type: "tween" }}
       >
         {animate && (
-          <motion.div className="flex justify-around w-[60%]">
+          <motion.div
+            className="flex justify-around w-[60%]"
+            animate={{ opacity: [0, 50, 100] }}
+            transition={{ duration: 0.5, type: "tween", delay: 0.3 }}
+          >
             <Orb
               index={0}
               scrollref={props.scrollRef}
