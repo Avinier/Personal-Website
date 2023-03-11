@@ -1,69 +1,106 @@
 import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import produce from "immer";
+
 import Logo from "../UI/Logo.js";
 
 const SKILLS = [
   {
     id: 0,
     title: "python",
+    color: "#fff",
   },
   {
     id: 1,
-    title: "python",
+    title: "javascript",
+    color: "#fff",
   },
   {
     id: 2,
-    title: "python",
+    title: "react",
+    color: "#fff",
   },
   {
     id: 3,
-    title: "python",
+    title: "nextjs",
+    color: "#fff",
   },
   {
     id: 4,
-    title: "python",
+    title: "c++",
+    color: "#fff",
   },
   {
     id: 5,
-    title: "python",
+    title: "typescript",
+    color: "#fff",
   },
   {
     id: 6,
-    title: "python",
+    title: "tailwindcss",
+    color: "#fff",
   },
   {
     id: 7,
-    title: "python",
+    title: "rust",
+    color: "#fff",
   },
   {
     id: 8,
-    title: "python",
+    title: "boo",
+    color: "#fff",
   },
   {
     id: 9,
-    title: "python",
+    title: "figma",
+    color: "#fff",
   },
   {
     id: 10,
-    title: "python",
+    title: "photoshop",
+    color: "#fff",
   },
   {
     id: 11,
-    title: "python",
+    title: "illustrator",
+    color: "#fff",
   },
 ];
 
 export default function SkillGallery() {
+  const [animate, setAnimate] = useState(false);
+
   return (
-    <div className="grid grid-cols-4 gap-[50px] w-[60%] mx-auto pt-[50px] h-max max-[768px]:hidden z-10">
+    <div className="grid grid-cols-4 w-[60%] mx-auto pt-[50px] h-[300px] max-[768px]:hidden z-10">
       {SKILLS.map((item, i) => {
         return (
-          <div
-            className="text-center font-content text-slate-50 dark:text-slate-700"
+          <motion.div
+            initial={{ opacity: 0 }}
+            onViewportEnter={() => {
+              setAnimate(true);
+            }}
+            onViewportLeave={() => {
+              setAnimate(false);
+            }}
+            animate={
+              animate
+                ? {
+                    opacity: 1,
+                    transition: { delay: 0.2 * i },
+                  }
+                : {
+                    opacity: 0,
+                    transition: {
+                      delay: 0.2 * i,
+                    },
+                  }
+            }
+            className="text-center font-content pt-[30px] text-slate-50 dark:text-slate-700"
             key={item.id}
           >
             {item.title}
-          </div>
+          </motion.div>
         );
       })}
     </div>

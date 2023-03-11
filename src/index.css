@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+h1 {
+  font-family: 'Playfair Display';
+}
+
+h4 {
+  font-family: 'Playfair Display';
+  font-style: italic;
+}
+
+p {
+  font-family: 'Poppins';
+}
+
 @font-face {
     font-family: "Playfair Display";
     src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("ttf"),

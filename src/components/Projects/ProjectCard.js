@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./ProjectCard.css";
+import ProjectModal from "./ProjectModal";
 
 export default function ProjectCard(props) {
   const [shadowPosX, setShadowPosX] = useState(8);
   const [shadowPosY, setShadowPosY] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const ARR = props.stack;
+
+  function clickHandler() {
+    setShowModal(true);
+  }
 
   const DragAnim = {
     boxShadow: `rgba(240, 46, 170, 0.4) ${shadowPosX}px ${shadowPosY}px, rgba(240, 46, 170, 0.3) ${
@@ -52,26 +58,30 @@ export default function ProjectCard(props) {
   }
 
   return (
-    <motion.section
-      drag
-      dragConstraints={{ top: 15, right: 15, bottom: 15, left: 15 }}
-      dragSnapToOrigin
-      onDrag={dragHandler}
-      whileDrag={DragAnim}
-      whileHover={HoverAnim}
-      transition={{ duration: 0.5, type: "tween" }}
-      className="relative project--card w-[250px] h-[250px] max-[786px]:w-[80%] max-[786px]:mx-auto cursor-pointer"
-    >
-      <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#0c0c0c] dark:from-[#FFFFD0] z-10">
-        <h2 className="text-slate-50 dark:text-slate-500 font-content text-center mt-[30px] text-[18px]">
-          Project description blah blah blah
-        </h2>
-      </div>
+    <>
+      <motion.section
+        drag
+        dragConstraints={{ top: 15, right: 15, bottom: 15, left: 15 }}
+        dragSnapToOrigin
+        onDrag={dragHandler}
+        whileDrag={DragAnim}
+        whileHover={HoverAnim}
+        transition={{ duration: 0.5, type: "tween" }}
+        onClick={clickHandler}
+        className="relative project--card w-[250px] h-[250px] max-[786px]:w-[80%] max-[786px]:mx-auto cursor-pointer"
+      >
+        <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#0c0c0c] dark:from-[#FFFFD0] z-10">
+          <h2 className="mx-auto mt-[40px] text-slate-50 font-medium dark:text-slate-500 font-content text-center text-[18px]">
+            {props.name}
+          </h2>
+        </div>
 
-      <img
-        className="absolute object-cover w-[100%] h-[100%]"
-        src={props.pic}
-      />
-    </motion.section>
+        <img
+          className="absolute object-cover w-[100%] h-[100%]"
+          src={props.pic}
+        />
+      </motion.section>
+      {showModal && <ProjectModal project={props.project} />}
+    </>
   );
 }

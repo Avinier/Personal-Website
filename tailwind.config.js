@@ -18,8 +18,8 @@ module.exports = {
         "pastel--blue": "#cffafe",
       },
       fontFamily: {
-        title: "Playfair Display",
-        content: "Poppins",
+        title: ["Playfair Display", "serif"],
+        content: ["Poppins", "san-serif"],
         subheading: "Open Sans",
       },
     },

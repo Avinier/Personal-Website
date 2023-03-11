@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard.js";
 import Link from "../UI/Link.js";
+
+import { motion } from "framer-motion";
 
 import rpslsPic from "../../assets/projectpics/rpsls.webp";
 import gameoflifePic from "../../assets/projectpics/gameoflife.webp";
@@ -17,7 +19,7 @@ const DUMMY = [
   },
   {
     id: 2,
-    project: "game of life",
+    project: "Game of Life",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gameoflifePic,
     github: "https://github.com/Avinier/Game-of-Life",
@@ -25,7 +27,7 @@ const DUMMY = [
   },
   {
     id: 3,
-    project: "GESTURES CONTROL",
+    project: "Gestures Control App",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gesturecontrolPic,
     github: "hgithubttps://github.com/Avinier/Gesture-Control-App",
@@ -33,7 +35,7 @@ const DUMMY = [
   },
   {
     id: 4,
-    project: "game of life",
+    project: "E-minor NFTs",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gameoflifePic,
     github: "https://github.com/Avinier/Game-of-Life",
@@ -41,10 +43,10 @@ const DUMMY = [
   },
   {
     id: 5,
-    project: "GESTURES CONTROL",
+    project: "Stocks Predictor",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gesturecontrolPic,
-    github: "hgithubttps://github.com/Avinier/Gesture-Control-App",
+    github: "https://github.com/Avinier/Gesture-Control-App",
     link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
   {
@@ -57,12 +59,14 @@ const DUMMY = [
   },
 ];
 export default function Project(props) {
+  const [animate, setAnimate] = useState(false);
+
   return (
     <section className="min-[768px]:mx-[80px] dark:font-medium">
-      <h2 className="font-title font-black text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
+      <h1 className="text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
         My Projects
-      </h2>
-      <p className="font-content text-center text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px] max-[786px]:mr-[10px]">
+      </h1>
+      <p className="text-center text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px] max-[786px]:mr-[10px]">
         From Web-Dev to ML, have played with several tech stacks. Can checkout
         all of my projects{" "}
         <Link isHref={true} href="https://github.com/Avinier">
@@ -70,18 +74,29 @@ export default function Project(props) {
         </Link>
       </p>
       <div className="grid grid-cols-3 gap-y-[20px] w-[60%] pt-[20px] mx-auto">
-        {DUMMY.map((item) => {
+        {DUMMY.map((item, i) => {
           return (
-            <ProjectCard
-              key={item.id}
-              name={item.project}
-              desc={item.desc}
-              pic={item.image}
-              link={item.link}
-              github={item.github}
-              stack={item.techstack}
-              dark={props.isDark}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              onViewportEnter={() => {
+                setAnimate(true);
+              }}
+              onViewportLeave={() => {
+                setAnimate(false);
+              }}
+              animate={
+                animate
+                  ? { opacity: 1, transition: { delay: 0.3 * i } }
+                  : { opacity: 0, transition: { delay: 0.3 * i } }
+              }
+            >
+              <ProjectCard
+                key={item.id}
+                name={item.project}
+                pic={item.image}
+                project={item}
+              />
+            </motion.div>
           );
         })}
       </div>

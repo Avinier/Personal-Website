@@ -30,9 +30,9 @@ export default function Skills() {
   return (
     <div className=" flex flex-col max-[786px]:w-[80%]  max-[786px]:mx-auto dark:font-medium">
       <article className="w-[80%] mx-auto max-[786px]:w-fit">
-        <h2 className="font-title font-black text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
+        <h1 className="text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
-        </h2>
+        </h1>
         <AnimatePresence>
           {!showTable && (
             <motion.section
@@ -42,7 +42,7 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="font-content w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
+                className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

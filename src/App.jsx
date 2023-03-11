@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className={`App ${!darkMode && `dark`}`}>
-      <div className='Body bg-main dark:bg-main--light ' ref={scrollRef}>
+      <div className='bg-main dark:bg-main--light ' ref={scrollRef}>
         <Navbar scrollRef={scrollRef} isDark={darkMode}/>
         <Toggler clickHandler={() => { setDarkMode(!darkMode) }} isDark={darkMode} />
         <div className='sect pt-[50px] max-[768px]:pt-[30px]'>

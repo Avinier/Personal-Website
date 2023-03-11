@@ -14,10 +14,10 @@ export default function Orb(props) {
 
   return (
     <motion.div
-      className="w-[50px] h-[50px] hover:cursor-pointer font-title text-[20px] font-black dark:text-main text-white"
+      className="w-[50px] h-[50px] hover:cursor-pointer font-black dark:text-main text-white"
       onClick={scrollToIndex}
     >
-      {props.name}
+      <h4 className="text-[25px]">{props.name}</h4>
     </motion.div>
   );
 }

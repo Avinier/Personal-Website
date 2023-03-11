@@ -3,12 +3,13 @@ import Link from "./Link";
 
 export default function Footer() {
   return (
-    <div className="bg-[#181818] dark:bg-[#fff4ae] absolute w-[100%]">
+    <div className="bg-main dark:bg-main--light absolute w-[100%]">
       <p className="font-content font-[800] text-secondary dark:text-secondary--light text-center p-[20px] tracking-wider">
-        Made with {"<3"} by{" "}
+        Made by{" "}
         <Link isHref={true} color={"#FE4E83"}>
           Avinier
-        </Link>
+        </Link>{" "}
+        , first of his name
       </p>
     </div>
   );
