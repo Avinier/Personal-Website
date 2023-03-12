@@ -4,7 +4,7 @@ import Link from "./Link";
 export default function Footer() {
   return (
     <div className="bg-main dark:bg-main--light absolute w-[100%]">
-      <p className="font-content font-[800] text-secondary dark:text-secondary--light text-center p-[20px] tracking-wider">
+      <p className="text-secondary dark:text-secondary--light text-center p-[20px] tracking-wider">
         Made by{" "}
         <Link isHref={true} color={"#FE4E83"}>
           Avinier

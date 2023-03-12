@@ -56,7 +56,7 @@ export default function Hero(props) {
           className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></motion.img>
         <div className="w-[50%] pt-[20px] max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
-          <h1 className="text-[5rem] text-center leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
+          <h1 className="text-[85px] text-center leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Hi, I'm Avinier
           </h1>
           <motion.p

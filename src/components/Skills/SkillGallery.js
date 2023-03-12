@@ -99,7 +99,7 @@ export default function SkillGallery() {
             className="text-center font-content pt-[30px] text-slate-50 dark:text-slate-700"
             key={item.id}
           >
-            {item.title}
+            <p>{item.title}</p>
           </motion.div>
         );
       })}

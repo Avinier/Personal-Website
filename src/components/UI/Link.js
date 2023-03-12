@@ -24,7 +24,7 @@ export function StyleOfLink(props) {
       <motion.button
         layouts
         onClick={props.clickHandler}
-        className="font-subheading text-pastel--purple dark:text-purple-700 hover:cursor-pointer"
+        className="text-accent dark:text-purple-700 hover:cursor-pointer"
         onHoverStart={() => {
           setAnimateLink(true);
         }}
@@ -32,7 +32,7 @@ export function StyleOfLink(props) {
           setAnimateLink(false);
         }}
       >
-        {props.children}
+        <h3>{props.children}</h3>
         <motion.div
           variants={linkVars}
           animate={animateLink ? "onStage" : "offStage"}

@@ -70,7 +70,7 @@ export default function Project(props) {
         From Web-Dev to ML, have played with several tech stacks. Can checkout
         all of my projects{" "}
         <Link isHref={true} href="https://github.com/Avinier">
-          here
+          <h3 className="text-[18px]">here</h3>
         </Link>
       </p>
       <div className="grid grid-cols-3 gap-y-[20px] w-[60%] pt-[20px] mx-auto">

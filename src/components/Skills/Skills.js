@@ -59,7 +59,7 @@ export default function Skills() {
               setShowTable((showTable) => !showTable);
             }}
           >
-            {!showTable ? `Show More` : `Show Less`}
+            {!showTable ? `show more` : `show less`}
           </Link>
           <AnimatePresence>
             {showTable && (
