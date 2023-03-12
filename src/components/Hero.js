@@ -9,7 +9,8 @@ import {
 import Link from "./UI/Link.js";
 import Grid from "./UI/Grid.js";
 
-import heroImg from "../assets/katsuragi.webp";
+import heroImgLight from "../assets/katsuragi.webp";
+import heroImgDark from "../assets/katsuragi-dark.webp";
 
 export default function Hero(props) {
   const [showMore, setShowMore] = useState(false);
@@ -50,7 +51,7 @@ export default function Hero(props) {
         {/* <Grid dark={props.isDark} /> */}
         <motion.img
           layout
-          src={heroImg}
+          src={props.isDark ? heroImgDark : heroImgLight}
           style={{ height: size, width: size, opacity: opacity }}
           transition={{ type: "tween" }}
           className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
@@ -65,7 +66,7 @@ export default function Hero(props) {
             animate={showMore ? "small" : "big"}
             className="text-center text-slate-50 leading-8 dark:text-slate-800 dark:font-medium"
           >
-            AKA Aditya Subramanian, an 18 yo programmer and designer from
+            AKA Aditya Subramanian, an 19 yo programmer and designer from
             Mumbai, India, currently studying computer science in NMIMS
             University.{" "}
             {showMore && (

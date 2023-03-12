@@ -37,7 +37,7 @@ function App() {
           <Project isDark={darkMode}/>
         </div>
         <div className='sect pt-[100px] max-[768px]:pt-[8rem]'>
-          <Connect />
+          <Connect isDark={darkMode}/>
         </div>
       </div>
     </div>

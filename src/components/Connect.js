@@ -1,5 +1,7 @@
 import React from "react";
-import connectImg from "../assets/naruto.gif";
+import connectImgLight from "../assets/naruto.gif";
+import connectImgDark from "../assets/sasuke.gif";
+
 import Link from "./UI/Link.js";
 import { useEffect } from "react";
 
@@ -7,12 +9,12 @@ import { motion } from "framer-motion";
 
 import Footer from "./UI/Footer";
 
-export default function Connect() {
+export default function Connect(props) {
   return (
     <>
       <div className="relative flex flex-col justify-around items-center max-[786px]:flex-col-reverse dark:font-medium pb-[5rem]">
         <motion.img
-          src={connectImg}
+          src={props.isDark ? connectImgDark : connectImgLight}
           transition={{ type: "tween" }}
           className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></motion.img>

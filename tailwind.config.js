@@ -17,11 +17,6 @@ module.exports = {
         "pastel--purple": "#e9d5ff",
         "pastel--blue": "#cffafe",
       },
-      fontFamily: {
-        title: ["Playfair Display", "serif"],
-        content: ["Poppins", "san-serif"],
-        subheading: "Open Sans",
-      },
     },
   },
   plugins: [],

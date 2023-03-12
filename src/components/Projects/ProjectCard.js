@@ -81,7 +81,9 @@ export default function ProjectCard(props) {
           src={props.pic}
         />
       </motion.section>
-      {showModal && <ProjectModal project={props.project} />}
+      {showModal && (
+        <ProjectModal project={props.project} setShowModal={setShowModal} />
+      )}
     </>
   );
 }
