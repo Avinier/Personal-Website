@@ -12,7 +12,7 @@ import Footer from "./UI/Footer";
 export default function Connect(props) {
   return (
     <>
-      <div className="relative flex flex-col justify-around items-center max-[786px]:flex-col-reverse dark:font-medium pb-[5rem]">
+      <div className="relative flex flex-col justify-around items-center dark:font-medium pb-[5rem]">
         <motion.img
           src={props.isDark ? connectImgDark : connectImgLight}
           transition={{ type: "tween" }}

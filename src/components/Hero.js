@@ -47,8 +47,8 @@ export default function Hero(props) {
   };
   return (
     <>
-      <div className="relative flex flex-col justify-around items-center max-[786px]:flex-col-reverse">
-        {/* <Grid dark={props.isDark} /> */}
+      <div className="relative flex flex-col justify-around items-center">
+        <Grid dark={props.isDark} />
         <motion.img
           layout
           src={props.isDark ? heroImgDark : heroImgLight}
@@ -56,7 +56,7 @@ export default function Hero(props) {
           transition={{ type: "tween" }}
           className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></motion.img>
-        <div className="w-[50%] pt-[20px] max-[786px]:w-[80%] max-[786px]:pt-[20px] z-10">
+        <div className="w-[50%] pt-[20px] max-[786px]:w-[100%] max-[786px]:pt-[20px] z-10">
           <h1 className="text-[85px] text-center leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Hi, I'm Avinier
           </h1>

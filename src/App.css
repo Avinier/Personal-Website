@@ -20,6 +20,10 @@
     border: 0px solid #ffffff;
   }  
 
+  *::selection {
+    background: #6decca;
+  }
+
 .App {
   overflow-x: hidden;
 }

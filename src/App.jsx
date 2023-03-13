@@ -30,13 +30,13 @@ function App() {
         <div className='sect pt-[50px] max-[768px]:pt-[30px]'>
           <Hero isDark={darkMode}/>
         </div>
-        <div className='sect pt-[100px] max-[768px]:pt-[8rem]'>
+        <div className='sect pt-[100px] max-[768px]:pt-[80px]'>
           <Skills />
         </div>
-        <div className='sect pt-[100px] max-[768px]:pt-[8rem]'>
+        <div className='sect pt-[100px] max-[768px]:pt-[80px]'>
           <Project isDark={darkMode}/>
         </div>
-        <div className='sect pt-[100px] max-[768px]:pt-[8rem]'>
+        <div className='sect pt-[100px] max-[768px]:pt-[80px]'>
           <Connect isDark={darkMode}/>
         </div>
       </div>

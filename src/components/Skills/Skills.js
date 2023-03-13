@@ -42,7 +42,7 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-fit"
+                className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-[100%]"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -78,7 +78,7 @@ export default function Skills() {
           </AnimatePresence>
         </motion.div>
       </article>
-      {!showTable && <SkillGallery />}
+      <SkillGallery />
     </div>
   );
 }

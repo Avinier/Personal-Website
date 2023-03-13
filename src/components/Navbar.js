@@ -20,19 +20,19 @@ export default function Navbar(props) {
   }, []);
 
   const navMobileVer =
-    "max-[768px]:flex-col max-[768px]:left-[85%] max-[768px]:justify-around max-[768px]:h-[50vh]";
+    "max-[768px]:left-[3%] max-[768px]:justify-around max-[768px]:h-[10vh] max-[768px]:w-[100%]";
 
   return (
     <AnimatePresence>
       <motion.div
         layout
-        className={`fixed left-[11%] w-[80%] pt-[15px] bg-main dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
+        className={`fixed left-[11%] w-[80%] pt-[15px] bg-slate-800 dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
         key="nav"
         transition={{ duration: 0.3, type: "tween" }}
       >
         {animate && (
           <motion.div
-            className="flex justify-around w-[60%]"
+            className="flex justify-around w-[60%] max-[768px]:w-[90%]"
             animate={{ opacity: [0, 50, 100] }}
             transition={{ duration: 0.5, type: "tween", delay: 0.3 }}
           >

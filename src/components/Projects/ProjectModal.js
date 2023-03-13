@@ -41,12 +41,13 @@ export default function ProjectModal(props) {
                 </Link>
               </div>
             </article>
-            <div className="bg-gradient-to-b from-[#FFFFD0] z-10">
+            <article className="relative  m-[45px]">
+              <div className="absolute w-[100%] h-[100%] bg-gradient-to-b from-[#FFFFD0] z-10"></div>
               <img
-                className="object-cover w-[250px] h-[250px] m-[45px]"
+                className="object-cover w-[250px] h-[250px]"
                 src={props.project.image}
               />
-            </div>
+            </article>
           </div>
         </ModalOverlay>,
         portalElement

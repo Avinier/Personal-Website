@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard.js";
 import Link from "../UI/Link.js";
 
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import rpslsPic from "../../assets/projectpics/rpsls.webp";
 import gameoflifePic from "../../assets/projectpics/gameoflife.webp";
@@ -59,7 +60,14 @@ const DUMMY = [
   },
 ];
 export default function Project(props) {
-  const [animate, setAnimate] = useState(false);
+  const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
+
+  const [animate, setAnimate] = useState(() => {
+    if (isBigScreen) return true;
+    else return false;
+  });
+
+  const projectMobileVer = `max-[768px]:flex max-[768px]:flex-col max-[768px]:w-[90%]`;
 
   return (
     <section className="min-[768px]:mx-[80px] dark:font-medium">
@@ -73,7 +81,9 @@ export default function Project(props) {
           <h3 className="text-[18px]">here</h3>
         </Link>
       </p>
-      <div className="grid grid-cols-3 gap-y-[20px] w-[60%] pt-[20px] mx-auto">
+      <div
+        className={`grid grid-cols-3 gap-y-[20px] w-[60%] pt-[20px] mx-auto ${projectMobileVer}`}
+      >
         {DUMMY.map((item, i) => {
           return (
             <motion.div
