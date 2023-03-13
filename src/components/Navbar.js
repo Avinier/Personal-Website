@@ -26,7 +26,7 @@ export default function Navbar(props) {
     <AnimatePresence>
       <motion.div
         layout
-        className={`fixed left-[11%] w-[80%] pt-[15px] bg-slate-800 dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
+        className={`fixed left-[11%] w-[80%] pt-[15px] bg-main dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
         key="nav"
         transition={{ duration: 0.3, type: "tween" }}
       >
