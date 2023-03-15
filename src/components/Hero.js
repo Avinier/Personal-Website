@@ -15,22 +15,6 @@ import heroImgDark from "../assets/katsuragi-dark.webp";
 export default function Hero(props) {
   const [showMore, setShowMore] = useState(false);
 
-  const { scrollY } = useScroll();
-  const x = useMotionValue(0);
-
-  const size = useTransform(x, [100, 300], [400, 60]);
-  const opacity = useTransform(x, [100, 300], [1, 0.25]);
-
-  useEffect(() => {
-    return scrollY.onChange((latest) => {
-      if (latest <= 300) {
-        x.set(latest);
-      } else {
-        x.set(0);
-      }
-    });
-  }, []);
-
   const heroVar = {
     small: {
       fontSize: "16px",
@@ -45,6 +29,7 @@ export default function Hero(props) {
       },
     },
   };
+
   return (
     <>
       <div className="relative flex flex-col justify-around items-center">
@@ -52,8 +37,6 @@ export default function Hero(props) {
         <motion.img
           layout
           src={props.isDark ? heroImgDark : heroImgLight}
-          style={{ height: size, width: size, opacity: opacity }}
-          transition={{ type: "tween" }}
           className="object-cover rounded-full w-[400px] h-[400px] max-[768px]:h-[350px] max-[768px]:w-[350px] z-[5]"
         ></motion.img>
         <div className="w-[50%] pt-[20px] max-[786px]:w-[100%] max-[786px]:pt-[20px] z-10">
