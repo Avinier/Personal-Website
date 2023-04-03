@@ -9,12 +9,13 @@ import rpslsPic from "../../assets/projectpics/rpsls.webp";
 import gameoflifePic from "../../assets/projectpics/gameoflife.webp";
 import gesturecontrolPic from "../../assets/projectpics/gesturecontrol.webp";
 import eminorPic from "../../assets/projectpics/eminor.webp";
+import rcorePic from "../../assets/projectpics/rcore.webp";
 
 const DUMMY = [
   {
     id: 1,
     project: "E-minor NFTs",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    desc: "A tool which creates beautiful ai-generated images out of your favourite song lyrics. Which you can NFT too.",
     image: eminorPic,
     github: "https://github.com/Avinier/E-minor",
     link: "https://e-minor.up.railway.app/",
@@ -22,7 +23,7 @@ const DUMMY = [
   {
     id: 2,
     project: "RPSLS GAME",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    desc: "A game inspired by the rock-paper-scissor-lizard-spock game from the TV sitcom 'The Big Bang Theory'",
     image: rpslsPic,
     github: "https://github.com/Avinier/RPSLS-Game",
     link: "https://rpslsreact.netlify.app/",
@@ -30,7 +31,7 @@ const DUMMY = [
   {
     id: 3,
     project: "Game of Life",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    desc: "A simulator based on Conoway's Game of Life",
     image: gameoflifePic,
     github: "https://github.com/Avinier/Game-of-Life",
     link: "https://gameoflifex.netlify.app/",
@@ -38,23 +39,23 @@ const DUMMY = [
   {
     id: 4,
     project: "Gestures Control App",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    desc: "A computer vision app which does several functions on specific hand gestures",
     image: gesturecontrolPic,
     github: "hgithubttps://github.com/Avinier/Gesture-Control-App",
     link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
   {
     id: 5,
-    project: "RPSLS GAME",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-    image: rpslsPic,
-    github: "https://github.com/Avinier/RPSLS-Game",
-    link: "https://rpslsreact.netlify.app/",
+    project: "RCore Minecraft Plugins",
+    desc: "Worked on the frontend and middleware of this project",
+    image: rcorePic,
+    github: "https://github.com/Avinier/RCore-WebBase",
+    link: "#",
   },
   {
     id: 6,
     project: "Adani Stocks Predictor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    desc: "An ML model to predict the stock price of Adani Enterprises",
     image: gesturecontrolPic,
     github: "https://github.com/Avinier/Gesture-Control-App",
     link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
