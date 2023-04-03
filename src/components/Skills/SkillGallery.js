@@ -18,7 +18,7 @@ const SKILLS = [
   },
   {
     id: 2,
-    title: "react",
+    title: "equity investing",
     color: "#fff",
   },
   {
@@ -48,7 +48,7 @@ const SKILLS = [
   },
   {
     id: 8,
-    title: "boo",
+    title: "f&o trading",
     color: "#fff",
   },
   {

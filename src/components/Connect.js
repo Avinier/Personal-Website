@@ -61,9 +61,9 @@ export default function Connect(props) {
               href="https://in.pinterest.com/avinier_2410/moi-work/"
               color="#E60023"
             >
-              graphic design work
+              graphic design work.
             </Link>{" "}
-            too :D. I'm always open to fun conversations and cool work.
+            I'm always open to fun conversations and cool work.
           </motion.p>
         </div>
       </div>

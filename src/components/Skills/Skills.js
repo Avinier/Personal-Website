@@ -44,41 +44,43 @@ export default function Skills() {
                 layout
                 className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-[100%]"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Programming, Design, Finance, Business, Art. I have my practical
+                knowledge in a diversified set of domains. My curiosity and
+                passion has led me to pursue these skills.
               </motion.p>
             </motion.section>
           )}
         </AnimatePresence>
         <motion.div>
-          <Link
-            isHref={false}
-            clickHandler={() => {
-              setShowTable((showTable) => !showTable);
-            }}
-          >
-            {!showTable ? `show more` : `show less`}
-          </Link>
           <AnimatePresence>
             {showTable && (
-              <motion.div
-                key="skill--table"
-                variants={tableVars}
-                initial="entry"
-                animate="onStage"
-                exit="offStage"
-                className="skill--table"
-                transition={{ type: "tween", duration: 0.5 }}
-              >
-                <SkillTable />
-              </motion.div>
+              // <motion.div
+              //   key="skill--table"
+              //   variants={tableVars}
+              //   initial="entry"
+              //   animate="onStage"
+              //   exit="offStage"
+              //   className="skill--table"
+              //   transition={{ type: "tween", duration: 0.5 }}
+              // >
+              //   <SkillTable />
+              // </motion.div>
+              <h3 className="text-[30px] text-center ">
+                detailed table coming soon!
+              </h3>
             )}
+            <Link
+              isHref={false}
+              clickHandler={() => {
+                setShowTable((showTable) => !showTable);
+              }}
+            >
+              {!showTable ? `show more` : `show less`}
+            </Link>
           </AnimatePresence>
         </motion.div>
       </article>
-      <SkillGallery />
+      {!showTable && <SkillGallery />}
     </div>
   );
 }

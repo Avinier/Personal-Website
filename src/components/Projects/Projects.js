@@ -8,10 +8,19 @@ import { useMediaQuery } from "react-responsive";
 import rpslsPic from "../../assets/projectpics/rpsls.webp";
 import gameoflifePic from "../../assets/projectpics/gameoflife.webp";
 import gesturecontrolPic from "../../assets/projectpics/gesturecontrol.webp";
+import eminorPic from "../../assets/projectpics/eminor.webp";
 
 const DUMMY = [
   {
     id: 1,
+    project: "E-minor NFTs",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    image: eminorPic,
+    github: "https://github.com/Avinier/E-minor",
+    link: "https://e-minor.up.railway.app/",
+  },
+  {
+    id: 2,
     project: "RPSLS GAME",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: rpslsPic,
@@ -19,7 +28,7 @@ const DUMMY = [
     link: "https://rpslsreact.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     project: "Game of Life",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gameoflifePic,
@@ -27,7 +36,7 @@ const DUMMY = [
     link: "https://gameoflifex.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     project: "Gestures Control App",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: gesturecontrolPic,
@@ -35,28 +44,20 @@ const DUMMY = [
     link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
   {
-    id: 4,
-    project: "E-minor NFTs",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-    image: gameoflifePic,
-    github: "https://github.com/Avinier/Game-of-Life",
-    link: "https://gameoflifex.netlify.app/",
-  },
-  {
     id: 5,
-    project: "Stocks Predictor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-    image: gesturecontrolPic,
-    github: "https://github.com/Avinier/Gesture-Control-App",
-    link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
-  },
-  {
-    id: 6,
     project: "RPSLS GAME",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
     image: rpslsPic,
     github: "https://github.com/Avinier/RPSLS-Game",
     link: "https://rpslsreact.netlify.app/",
+  },
+  {
+    id: 6,
+    project: "Adani Stocks Predictor",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+    image: gesturecontrolPic,
+    github: "https://github.com/Avinier/Gesture-Control-App",
+    link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
 ];
 export default function Project(props) {

@@ -7,7 +7,6 @@ export default function Navbar(props) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
   const [animate, setAnimate] = useState(false);
   const { scrollY } = useScroll();
-  const [pos, setPos] = useState(0);
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
@@ -26,7 +25,7 @@ export default function Navbar(props) {
     <AnimatePresence>
       <motion.div
         layout
-        className={`fixed left-[11%] w-[80%] pt-[15px] bg-main dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
+        className={`fixed left-[11%] w-[80%] bg-main dark:bg-main--light flex justify-around cursor-pointer mx-auto z-20 ${navMobileVer}`}
         key="nav"
         transition={{ duration: 0.3, type: "tween" }}
       >
