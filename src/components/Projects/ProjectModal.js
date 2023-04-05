@@ -20,7 +20,7 @@ export default function ProjectModal(props) {
 
       {ReactDOM.createPortal(
         <ModalOverlay>
-          <div className="bg-main--light flex">
+          <div className="bg-main--light flex w-[70%]">
             <button
               onClick={() => {
                 props.setShowModal(false);
