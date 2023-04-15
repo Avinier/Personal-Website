@@ -10,12 +10,21 @@
 
 .modal {
     position: fixed;
+    width: 85%;
+    height: 40vh;
     top: 30vh;
-    left: 18%;    
+    left: 9%; 
     z-index: 200;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+    .modal {
+        top: 10vh;
+        left: 4%;
+        width: 95%;
+    }
+}
 

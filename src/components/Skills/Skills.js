@@ -28,8 +28,8 @@ export default function Skills() {
   };
 
   return (
-    <div className=" flex flex-col max-[786px]:w-[80%]  max-[786px]:mx-auto dark:font-medium">
-      <article className="w-[80%] mx-auto max-[786px]:w-fit">
+    <div className=" flex flex-col max-[786px]:w-[100%]  max-[786px]:mx-auto dark:font-medium">
+      <article className="w-[80%] max-[786px]:w-[100%] mx-auto">
         <h1 className="text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
           My Skills
         </h1>
@@ -42,7 +42,7 @@ export default function Skills() {
             >
               <motion.p
                 layout
-                className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8  max-[786px]:w-[100%]"
+                className="w-[75%] mx-auto text-center text-slate-50 dark:text-slate-700 leading-8 max-[786px]:w-[95%] max-[768px]:leading-10"
               >
                 Programming, Design, Finance, Business, Art. I have my practical
                 knowledge in a diversified set of domains. My curiosity and

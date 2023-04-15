@@ -22,7 +22,7 @@ export default function Connect(props) {
           <h1 className="text-[5rem] text-center pt-[20px] leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
             Wanna Connect?
           </h1>
-          <motion.p className="font-content w-[50%] text-center mx-auto text-slate-50 dark:text-slate-700 text-[18px] leading-8">
+          <motion.p className="font-content w-[50%] text-center mx-auto text-slate-50 dark:text-slate-700 text-[18px] leading-8 max-[768px]:leading-10 max-[768px]:w-[100%]">
             I'm most active in{" "}
             <Link
               isHref={true}

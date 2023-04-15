@@ -1,10 +1,8 @@
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import Orb from "./UI/Orb.js";
 
 export default function Navbar(props) {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
   const [animate, setAnimate] = useState(false);
   const { scrollY } = useScroll();
 
@@ -19,7 +17,7 @@ export default function Navbar(props) {
   }, []);
 
   const navMobileVer =
-    "max-[768px]:left-[3%] max-[768px]:justify-around max-[768px]:h-[10vh] max-[768px]:w-[100%]";
+    "max-[768px]:left-0 max-[768px]:justify-around max-[768px]:w-[100%]";
 
   return (
     <AnimatePresence>

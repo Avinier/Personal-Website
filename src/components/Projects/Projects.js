@@ -61,6 +61,7 @@ const DUMMY = [
     link: "https://www.youtube.com/watch?v=UyBYr8Ke0qA",
   },
 ];
+
 export default function Project(props) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
@@ -72,11 +73,11 @@ export default function Project(props) {
   const projectMobileVer = `max-[768px]:flex max-[768px]:flex-col max-[768px]:w-[90%]`;
 
   return (
-    <section className="min-[768px]:mx-[80px] dark:font-medium">
-      <h1 className="text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem] max-[786px]:ml-[40px]">
+    <section className="mx-[80px] max-[768px]:mx-0 dark:font-medium">
+      <h1 className="text-[6rem] text-center text-secondary dark:text-secondary--light max-[786px]:text-[4rem] ">
         My Projects
       </h1>
-      <p className="text-center text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit max-[786px]:ml-[40px] max-[786px]:mr-[10px]">
+      <p className="text-center text-slate-50 dark:text-slate-700 text-[18px] max-[786px]:w-fit  ">
         From Web-Dev to ML, have played with several tech stacks. Can checkout
         all of my projects{" "}
         <Link isHref={true} href="https://github.com/Avinier">

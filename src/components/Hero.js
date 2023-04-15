@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useMotionValue,
-  useTransform,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+
 import Link from "./UI/Link.js";
 import Grid from "./UI/Grid.js";
 
@@ -14,6 +10,7 @@ import heroImgDark from "../assets/katsuragi-dark.webp";
 
 export default function Hero(props) {
   const [showMore, setShowMore] = useState(false);
+  const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
   const heroVar = {
     small: {
@@ -41,13 +38,14 @@ export default function Hero(props) {
         ></motion.img>
         <div className="w-[50%] pt-[20px] max-[786px]:w-[100%] max-[786px]:pt-[20px] z-10">
           <h1 className="text-[85px] text-center leading-[75px] pb-3 text-secondary dark:text-secondary--light max-[786px]:text-[4rem]">
-            Hi, I'm Avinier
+            Hi,
+            {!isBigScreen && <br />} I'm Avinier
           </h1>
           <motion.p
             layout
             variants={heroVar}
             animate={showMore ? "small" : "big"}
-            className="text-center text-slate-50 leading-8 dark:text-slate-800 dark:font-medium"
+            className="text-center text-slate-50 leading-8 dark:text-slate-800 dark:font-medium max-[768px]:leading-10 max-[768px]:m-[5px] "
           >
             AKA Aditya Subramanian, an 19 yo programmer and designer from
             Mumbai, India, currently studying computer science in NMIMS
@@ -85,20 +83,20 @@ export default function Hero(props) {
           >
             {showMore ? "Less." : "More?"}
           </Link>
-          <article className="flex justify-around w-[50%] mx-auto">
-            <Link
-              isHref={true}
-              href="mailto:adisubu2410@gmail.com"
-              color="#E1306C"
-            >
-              gmail
-            </Link>
+          <article className="flex justify-around w-[50%] mx-auto max-[768px]:w-[80%]">
             <Link
               isHref={true}
               href="https://twitter.com/aviniertwt"
               color="#1DA1F2"
             >
               twitter
+            </Link>
+            <Link
+              isHref={true}
+              href="https://www.linkedin.com/in/aditya-subramanian-3647a1203/"
+              color="#0e76a8"
+            >
+              linkedin
             </Link>
             <Link isHref={true} href="https://github.com/Avinier" color="#222">
               github
