@@ -83,7 +83,7 @@ export default function Hero(props) {
           >
             {showMore ? "Less." : "More?"}
           </Link>
-          <article className="flex justify-around w-[50%] mx-auto max-[768px]:w-[80%]">
+          <article className="flex justify-around w-[70%] mx-auto max-[768px]:w-[80%]">
             <Link
               isHref={true}
               href="https://twitter.com/aviniertwt"
@@ -100,6 +100,13 @@ export default function Hero(props) {
             </Link>
             <Link isHref={true} href="https://github.com/Avinier" color="#222">
               github
+            </Link>
+            <Link
+              isHref={true}
+              href="https://drive.google.com/file/d/1kj0-58gAX2zz_JV6UtalN2IUE-njMpln/view?usp=sharing"
+              color="#5BFF9D"
+            >
+              resume
             </Link>
           </article>
         </div>
