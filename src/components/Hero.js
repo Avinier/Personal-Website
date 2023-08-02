@@ -102,13 +102,13 @@ export default function Hero(props) {
               github
             </Link>
             {isBigScreen && (
-              <Link
-                isHref={true}
-                href="https://drive.google.com/file/d/1kj0-58gAX2zz_JV6UtalN2IUE-njMpln/view?usp=sharing"
-                color="#5BFF9D"
-              >
-                resume
-              </Link>
+              // <Link
+              //   isHref={true}
+              //   href="https://drive.google.com/file/d/1kj0-58gAX2zz_JV6UtalN2IUE-njMpln/view?usp=sharing"
+              //   color="#5BFF9D"
+              // >
+              //   resume
+              // </Link>
             )}
           </article>
         </div>
