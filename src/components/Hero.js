@@ -86,7 +86,7 @@ export default function Hero(props) {
           <article className="flex justify-around w-[70%] mx-auto max-[768px]:w-[80%]">
             <Link
               isHref={true}
-              href="https://twitter.com/aviniertwt"
+              href="https://twitter.com/avinierx"
               color="#1DA1F2"
             >
               twitter
